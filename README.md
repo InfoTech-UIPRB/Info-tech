@@ -1,1 +1,1 @@
-# Info-tech
+# Infotech
