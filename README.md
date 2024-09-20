@@ -4,7 +4,7 @@
 This proyect uses the following technology:</p>
 
 <ul>
-<li>Html</li>
-<li>Tailwind</li>
-<li>Flowbite</li>
+    <li>Html</li>
+    <li>Tailwind</li>
+    <li>Flowbite</li>
 </ul>
