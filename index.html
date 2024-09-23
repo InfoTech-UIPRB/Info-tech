@@ -14,6 +14,7 @@
         <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="./Images/png logo infotech.png" class="h-8" alt="InfoTech Logo" />
         </a>
+        <!--When the screen is shrink it shows dropdown -->
         <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
             <span class="sr-only">Open main menu</span>
             <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
@@ -22,21 +23,21 @@
         </button>
         
         <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0   dark:border-gray-700">
+          <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:border-gray-700">
             <li>
-              <a href="#" class="block py-2 px-3 text-white rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home</a>
+              <a href="#" class="block py-2 px-3 text-white rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:hover:bg-blue-700 md:dark:text-blue-500" aria-current="page">Home</a>
             </li>
             <li>
-              <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+              <a href="#" class="custom-navbar">About</a>
             </li>
             <li>
-              <a href="./Pages/Achievements.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Achievements</a>
+              <a href="./Pages/Achievements.html" class="custom-navbar">Achievements</a>
             </li>
             <li>
-              <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">How to join</a>
+              <a href="https://form.jotform.com/242516063407047" target="_blank" class="custom-navbar">How to join</a>
             </li>
             <li>
-              <a href="./Pages/Calendar.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Calender</a>
+              <a href="./Pages/Calendar.html" class="custom-navbar">Calendar</a>
             </li>
           </ul>
         </div>
@@ -45,13 +46,12 @@
     
 
 
-
 <div id="default-carousel" class="relative w-full" data-carousel="slide">
   <!-- Carousel wrapper -->
   <div class="relative h-96 overflow-hidden rounded-lg md:h-[500px] lg:h-[600px]">
        <!-- Item 1 -->
       <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="./Images/Foto_de_Actividad_del_sum_con_director.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+          <img src="./Images/Hacniel_en_un_viaje.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
       </div>
       <!-- Item 2 -->
       <div class="hidden duration-700 ease-in-out" data-carousel-item>
@@ -62,6 +62,7 @@
           <img src="./Images/Chelimar_dando_algo.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
       </div>
   </div>
+
   <!-- Slider indicators -->
   <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
       <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
@@ -69,6 +70,7 @@
       <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
   </div>
   <!-- Slider controls -->
+
   <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
       <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
           <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
@@ -86,6 +88,150 @@
       </span>
   </button>
 </div>
+
+<div class="text-white text-center bg-black">
+  <h1 class="text-5xl">Welcome to the Infotech Website!</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque necessitatibus corrupti ad sint alias fugiat ratione praesentium voluptatibus ut, reiciendis, aliquid quibusdam rem cumque voluptatum debitis asperiores veritatis harum porro.</p>
+</div>
+
+
+<h1 class="text-center text-4xl text-white bg-black">Events</h1>
+<div class="bg-black py-6 flex flex-col justify-center sm:py-12">
+ 
+  <div class="py-3 sm:max-w-xl sm:mx-auto w-full px-2 sm:px-0">
+
+    <div class="relative text-gray-700 antialiased text-sm font-semibold">
+
+      <!-- Vertical Line -->
+      <div class="hidden sm:block w-1 bg-blue-300 absolute h-full left-1/2 transform -translate-x-1/2"></div>
+
+      <!-- Left section, set by justify-start and sm:pr-8 -->
+      <div class="mt-6 sm:mt-0 sm:mb-28">
+        <div class="flex flex-col sm:flex-row items-center">
+          <div class="flex justify-start w-full mx-auto items-center">
+            <div class="w-full sm:w-1/2 sm:pr-8">
+              <div class="p-4 bg-white rounded shadow">
+                Reunion 1
+              </div>
+            </div>
+          </div>
+          <!--Circle-->
+          <div class="rounded-full bg-blue-500 border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
+          </div>
+        </div>
+      </div>
+
+      <!-- Right section, set by justify-end and sm:pl-8 -->
+      <div class="mt-6 sm:mt-0 sm:mb-28">
+        <div class="flex flex-col sm:flex-row items-center">
+          <div class="flex justify-end w-full mx-auto items-center">
+            <div class="w-full sm:w-1/2 sm:pl-8">
+              <div class="p-4 bg-white rounded shadow">
+                Reunion 2
+              </div>
+            </div>
+          </div>
+            <!--Circle-->
+            <div class="rounded-full bg-blue-500 border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
+          </div>
+        </div>
+      </div>
+
+      <!-- Left section, set by justify-start and sm:pr-8 -->
+      <div class="mt-6 sm:mt-0 sm:mb-28 ">           
+        <div class="flex flex-col sm:flex-row items-center">
+          <div class="flex justify-start w-full mx-auto items-center">
+            <div class="w-full sm:w-1/2 sm:pr-8">
+              <div class="p-4 bg-white rounded shadow">
+                Reunion 3
+              </div>
+            </div>
+          </div>
+          <!--Circle-->
+          <div class="rounded-full bg-blue-500 border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
+          </div>
+        </div>
+      </div>
+
+      <!-- Right section, set by justify-end and sm:pl-8 -->
+      <div class="mt-6 sm:mt-0">
+        <div class="flex flex-col sm:flex-row items-center">
+          <div class="flex justify-end w-full mx-auto items-center">
+            <div class="w-full sm:w-1/2 sm:pl-8">
+              <div class="p-4 bg-white rounded shadow">
+                Reunion 4
+              </div>
+            </div>
+          </div>
+          <!--Circle-->
+          <div class="rounded-full bg-blue-500 border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center">
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+  </div>
+</div>
+<h1 class="text-white flex justify-center bg-black text-5xl">Directiva</h1>
+<div class="flex justify-center bg-black">
+  <div class="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 p-4">
+      <div class="flex flex-col items-center pb-10">
+          <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="./Images/Chelimar_dando_algo.jpg" alt="Image of Chelimar"/>
+          <h5 class="mb-1 text-xl font-medium text-white text-center">Chelimar Morales</h5>
+          <span class="text-sm text-gray-500">President</span>
+      </div>
+      <div class="flex flex-col items-center pb-10">
+          <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="./Images/Chelimar_dando_algo.jpg" alt="Image of Chelimar"/>
+          <h5 class="mb-1 text-xl font-medium text-white text-center">Chelimar Morales</h5>
+          <span class="text-sm text-gray-500">President</span>
+      </div>
+      <div class="flex flex-col items-center pb-10">
+          <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="./Images/Chelimar_dando_algo.jpg" alt="Image of Chelimar"/>
+          <h5 class="mb-1 text-xl font-medium text-white text-center">Chelimar Morales</h5>
+          <span class="text-sm text-gray-500">President</span>
+      </div>
+      <div class="flex flex-col items-center pb-10">
+          <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="./Images/Chelimar_dando_algo.jpg" alt="Image of Chelimar"/>
+          <h5 class="mb-1 text-xl font-medium text-gray-900 text-center">Chelimar Morales</h5>
+          <span class="text-sm text-gray-500">President</span>
+      </div>
+      <div class="flex flex-col items-center pb-10">
+          <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="./Images/Chelimar_dando_algo.jpg" alt="Image of Chelimar"/>
+          <h5 class="mb-1 text-xl font-medium text-gray-900 text-center">Chelimar Morales</h5>
+          <span class="text-sm text-gray-500">President</span>
+      </div>
+      <div class="flex flex-col items-center pb-10">
+          <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="./Images/Chelimar_dando_algo.jpg" alt="Image of Chelimar"/>
+          <h5 class="mb-1 text-xl font-medium text-gray-900 text-center">Chelimar Morales</h5>
+          <span class="text-sm text-gray-500">President</span>
+      </div>
+      <div class="flex flex-col items-center pb-10">
+        <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="./Images/Chelimar_dando_algo.jpg" alt="Image of Chelimar"/>
+        <h5 class="mb-1 text-xl font-medium text-white text-center">Chelimar Morales</h5>
+        <span class="text-sm text-gray-500">President</span>
+    </div>
+    <div class="flex flex-col items-center pb-10">
+        <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="./Images/Chelimar_dando_algo.jpg" alt="Image of Chelimar"/>
+        <h5 class="mb-1 text-xl font-medium text-gray-900 text-center">Chelimar Morales</h5>
+        <span class="text-sm text-gray-500">President</span>
+    </div>
+    <div class="flex flex-col items-center pb-10">
+        <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="./Images/Chelimar_dando_algo.jpg" alt="Image of Chelimar"/>
+        <h5 class="mb-1 text-xl font-medium text-gray-900 text-center">Chelimar Morales</h5>
+        <span class="text-sm text-gray-500">President</span>
+    </div>
+    <div class="flex flex-col items-center pb-10">
+        <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="./Images/Chelimar_dando_algo.jpg" alt="Image of Chelimar"/>
+        <h5 class="mb-1 text-xl font-medium text-gray-900 text-center">Chelimar Morales</h5>
+        <span class="text-sm text-gray-500">President</span>
+    </div>
+  </div>
+</div>
+
+
 <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
 <script src="./Javascript/scripts.js"></script>
   </body>
