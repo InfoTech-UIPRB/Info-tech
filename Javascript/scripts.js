@@ -7,13 +7,13 @@ function plusDivs(n) {
 }
 
 function showDivs(n) {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
+
+    let x = document.getElementsByClassName("mySlides");
     
     if (n >= x.length) { slideIndex = 0; }  // Reset to first slide if at end
     if (n < 0) { slideIndex = x.length - 1; } // Reset to last slide if before first
 
-    for (i = 0; i < x.length; i++) {
+    for (let i = 0; i < x.length; i++) {
         x[i].classList.remove("opacity-100"); // Hide all slides
         x[i].classList.add("opacity-0");       // Set them to invisible
     }
