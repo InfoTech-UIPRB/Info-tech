@@ -635,8 +635,6 @@ video {
   @media (prefers-color-scheme: dark) {
     .custom-navbar:hover {
       background-color: transparent;
-      --tw-text-opacity: 1;
-      color: rgb(59 130 246 / var(--tw-text-opacity));
     }
   }
 }
@@ -762,6 +760,10 @@ video {
   margin-bottom: 1.25rem;
 }
 
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -810,12 +812,20 @@ video {
   height: 2.5rem;
 }
 
+.h-16 {
+  height: 4rem;
+}
+
 .h-2 {
   height: 0.5rem;
 }
 
 .h-24 {
   height: 6rem;
+}
+
+.h-36 {
+  height: 9rem;
 }
 
 .h-4 {
@@ -874,6 +884,10 @@ video {
   width: 6rem;
 }
 
+.w-36 {
+  width: 9rem;
+}
+
 .w-4 {
   width: 1rem;
 }
@@ -915,10 +929,6 @@ video {
 }
 
 .flex-shrink {
-  flex-shrink: 1;
-}
-
-.shrink {
   flex-shrink: 1;
 }
 
@@ -1315,10 +1325,6 @@ video {
 
 .pb-10 {
   padding-bottom: 2.5rem;
-}
-
-.pb-4 {
-  padding-bottom: 1rem;
 }
 
 .pt-2 {
