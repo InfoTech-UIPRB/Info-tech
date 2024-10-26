@@ -906,6 +906,10 @@ video {
   height: 1000px;
 }
 
+.h-36 {
+  height: 9rem;
+}
+
 .min-h-\[70px\] {
   min-height: 70px;
 }
@@ -965,6 +969,10 @@ video {
 .w-max {
   width: -moz-max-content;
   width: max-content;
+}
+
+.w-36 {
+  width: 9rem;
 }
 
 .max-w-6xl {
