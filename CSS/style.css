@@ -19,4 +19,20 @@
     .slides {
         @apply absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-0
     }
+
+    @keyframes fadeInUp {
+        0% {
+            transform: translateX(100);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        
+    }
+
+    .fadeInUp-animation {
+        animation: 2.5s fadeInUp;
+    }
 }

@@ -8,10 +8,10 @@ module.exports = {
     extend: {
 
       colors:{
-        'custom-green': '#027516',
-        'custom-yellow':'#f5ff0a',
-        'custom-white': '#fffdfa',
-        'custom-black': '#333333',
+        'infotech-green': '#027516',
+        'infotech-yellow':'#f5ff0a',
+        'infotech-white': '#fffdfa',
+        'infotech-black': '#333333',
       },
     },
   },
