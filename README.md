@@ -5,7 +5,7 @@ This proyect uses the following technology:</p>
 
 <ul>
     <li>Html</li>
-    <li>Javascript<li>
+    <li>Javascript</li>
     <li>Tailwind</li>
     <li>Flowbite</li>
 </ul>
