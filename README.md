@@ -9,3 +9,7 @@ This proyect uses the following technology:</p>
     <li>Tailwind</li>
     <li>Flowbite</li>
 </ul>
+
+
+# How to run the website:
+<p> To run the website you need to run this command in your terminal: npx tailwindcss -i ./CSS/style.css -o ./CSS/output.css --watch </p>
