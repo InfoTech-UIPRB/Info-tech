@@ -1,4 +1,5 @@
 "use strict";
+
 let slideIndex = 0;
 showDivs(slideIndex);
 
