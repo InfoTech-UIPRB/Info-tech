@@ -53,8 +53,8 @@ function onScroll()
                 item.classList.add(
                   "absolute",
                   "xl:h-10",
-                  "md:h-5",
-                  "sm:h-3",
+                  "md:h-7",
+                  "sm:h-5",
                   "before:content-['']", 
                   "before:text-white",
                   "before:absolute",
