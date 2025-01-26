@@ -50,8 +50,26 @@ function onScroll()
             if(item.style.display !== "block")
             {
                 item.style.display = "block"
-                item.setAttribute("class", "absolute xl:h-10 md:h-5 sm:h-3 before:content-[''] before:text-white before:absolute before:inset-0 before:animate-typewriter before:bg-black after:content-[''] after:absolute after:inset-0 after:w-[0.125em] after:animate-caret after:bg-white");
-            }
+                item.classList.add(
+                  "absolute",
+                  "xl:h-10",
+                  "md:h-5",
+                  "sm:h-3",
+                  "before:content-['']", 
+                  "before:text-white",
+                  "before:absolute",
+                  "before:inset-0",
+                  "before:animate-typewriter",
+                  "before:bg-black",
+                  "after:content-['']",
+                  "after:absolute",
+                  "after:inset-0",
+                  "after:w-[0.125em]",
+                  "after:animate-caret",
+                  "after:bg-white"
+                );
+                
+              }
     
         }
         else {
