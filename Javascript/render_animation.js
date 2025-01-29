@@ -52,9 +52,8 @@ function onScroll()
                 item.style.display = "block"
                 item.classList.add(
                   "absolute",
-                  "xl:h-10",
-                  "md:h-7",
-                  "sm:h-5",
+                  "lg:h-10",
+                  "md:h-15",
                   "before:content-['']", 
                   "before:text-white",
                   "before:absolute",

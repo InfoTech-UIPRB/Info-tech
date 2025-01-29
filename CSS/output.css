@@ -997,12 +997,24 @@ video {
   height: 100vh;
 }
 
+.h-auto {
+  height: auto;
+}
+
 .h-full {
   height: 100%;
 }
 
-.h-auto {
-  height: auto;
+.h-20 {
+  height: 5rem;
+}
+
+.h-1 {
+  height: 0.25rem;
+}
+
+.h-2 {
+  height: 0.5rem;
 }
 
 .max-h-0 {
@@ -1017,12 +1029,12 @@ video {
   max-height: 5rem;
 }
 
-.min-h-screen {
-  min-height: 100vh;
-}
-
 .min-h-20 {
   min-height: 5rem;
+}
+
+.min-h-screen {
+  min-height: 100vh;
 }
 
 .w-1 {
@@ -1067,6 +1079,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-0 {
+  width: 0px;
 }
 
 .min-w-min {
@@ -1915,40 +1931,20 @@ video {
     height: 1.25rem;
   }
 
-  .sm\:max-h-0 {
-    max-height: 0px;
+  .sm\:h-8 {
+    height: 2rem;
   }
 
-  .sm\:max-h-2 {
-    max-height: 0.5rem;
+  .sm\:h-10 {
+    height: 2.5rem;
   }
 
-  .sm\:max-h-20 {
-    max-height: 5rem;
-  }
-
-  .sm\:min-h-20 {
-    min-height: 5rem;
-  }
-
-  .sm\:min-h-screen {
-    min-height: 100vh;
+  .sm\:h-7 {
+    height: 1.75rem;
   }
 
   .sm\:w-1\/2 {
     width: 50%;
-  }
-
-  .sm\:w-2 {
-    width: 0.5rem;
-  }
-
-  .sm\:w-10 {
-    width: 2.5rem;
-  }
-
-  .sm\:w-auto {
-    width: auto;
   }
 
   .sm\:translate-y-0 {
@@ -1994,6 +1990,10 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:absolute {
+    position: absolute;
+  }
+
   .md\:order-1 {
     order: 1;
   }
@@ -2034,6 +2034,30 @@ video {
     height: 1.75rem;
   }
 
+  .md\:h-8 {
+    height: 2rem;
+  }
+
+  .md\:h-10 {
+    height: 2.5rem;
+  }
+
+  .md\:h-20 {
+    height: 5rem;
+  }
+
+  .md\:h-1 {
+    height: 0.25rem;
+  }
+
+  .md\:h-2\/4 {
+    height: 50%;
+  }
+
+  .md\:h-2\/3 {
+    height: 66.666667%;
+  }
+
   .md\:w-1\/2 {
     width: 50%;
   }
@@ -2048,6 +2072,38 @@ video {
 
   .md\:w-auto {
     width: auto;
+  }
+
+  .md\:w-1 {
+    width: 0.25rem;
+  }
+
+  .md\:w-0 {
+    width: 0px;
+  }
+
+  .md\:w-1\/5 {
+    width: 20%;
+  }
+
+  .md\:w-2\/5 {
+    width: 40%;
+  }
+
+  .md\:w-2\/6 {
+    width: 33.333333%;
+  }
+
+  .md\:w-2\/3 {
+    width: 66.666667%;
+  }
+
+  .md\:w-2\/4 {
+    width: 50%;
+  }
+
+  .md\:w-2 {
+    width: 0.5rem;
   }
 
   .md\:grid-cols-3 {
@@ -2083,12 +2139,16 @@ video {
 }
 
 @media (min-width: 1024px) {
-  .lg\:min-h-screen {
-    min-height: 100vh;
+  .lg\:h-10 {
+    height: 2.5rem;
   }
 
   .lg\:w-2\/5 {
     width: 40%;
+  }
+
+  .lg\:w-1\/5 {
+    width: 20%;
   }
 
   .lg\:grid-cols-4 {
