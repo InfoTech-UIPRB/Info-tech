@@ -1,10 +1,15 @@
 import React from 'react' 
 
+
+//Pages
+import HomePage from './pages/HomePage.jsx'
+
+
 function App() {
 
   return (
     <>
-      <h1 className='bg-red-400'>Hello World</h1>
+      <HomePage />
     </>
   )
 }
