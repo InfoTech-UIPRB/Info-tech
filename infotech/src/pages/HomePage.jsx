@@ -1,7 +1,7 @@
 import React from "react";
 
 //Components
-import { Carousel } from "flowbite-react";
+
 
 const SlideShow = () => {
     return (
