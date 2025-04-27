@@ -1,8 +1,21 @@
 import React from "react";
 
-const CarouselItem = ({imagePath}) => {
+const CarouselItem = ({imagePath, fade}) => {
     return (
-        <img className="mySlides absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-100" src={imagePath} alt="image" />
+        <img 
+            src={imagePath} 
+            alt="image" 
+            className= {
+                `absolute
+                 inset-0
+                 w-full 
+                 h-full 
+                 object-cover 
+                 transition-opacity 
+                 duration-500 
+                 ease-in-out 
+                 ${fade ? "opacity-100": "opacity-0"}`
+            } />
     )
 }
 

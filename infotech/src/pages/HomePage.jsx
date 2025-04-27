@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { ImagesPath } from "../components/ImagesPath";
 import Carousel from "../components/Carousel";
 import NavBar from "../components/Navbar";
