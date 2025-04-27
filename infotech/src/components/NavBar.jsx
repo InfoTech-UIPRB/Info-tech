@@ -1,26 +1,26 @@
 import React from "react";
-import { Navbar, NavbarBrand, NavbarCollapse, NavbarLink, NavbarToggle } from "flowbite-react";
 
 const NavBar = () => {
     return (
-        <Navbar fluid rounded>
-          <NavbarBrand as={""} href="https://flowbite-react.com">
-            <img src="/favicon.svg" className="mr-3 h-6 sm:h-9" alt="Flowbite React Logo" />
-            <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Flowbite React</span>
-          </NavbarBrand>
-          <NavbarToggle />
-          <NavbarCollapse>
-            <NavbarLink href="#" active>
-              Home
-            </NavbarLink>
-            <NavbarLink as={""} href="#">
-              About
-            </NavbarLink>
-            <NavbarLink href="#">Services</NavbarLink>
-            <NavbarLink href="#">Pricing</NavbarLink>
-            <NavbarLink href="#">Contact</NavbarLink>
-          </NavbarCollapse>
-        </Navbar>
+      <div className="navbar bg-base-100 shadow-sm">
+      <div className="flex-1">
+        <a className="btn btn-ghost text-xl">daisyUI</a>
+      </div>
+      <div className="flex-none">
+        <ul className="menu menu-horizontal px-1">
+          <li><a>Link</a></li>
+          <li>
+            <details>
+              <summary>Parent</summary>
+              <ul className="bg-base-100 rounded-t-none p-2">
+                <li><a>Link 1</a></li>
+                <li><a>Link 2</a></li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </div>
+    </div>
       );
 }
 
