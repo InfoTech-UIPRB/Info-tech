@@ -11,7 +11,7 @@ const Carousel = ({images})=>{
             setFade(false)
 
             setTimeout(() => {
-                setImage(prevState => (prevState - 1 < 0) ? prevState = images.length-1 : prevState -1)
+                setImage(prevState => (prevState + 1 >= images.length) ? prevState = 0 : prevState + 1)
                 setFade(true)
             }, 300)
 
