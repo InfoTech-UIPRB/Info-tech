@@ -5,35 +5,25 @@ import NavBar from "../components/Navbar";
 //Components
 
 
-const HomePage = () => {
+const HomePage = () => { 
 
-    const images = ImagesPath;
-    const [index, setIndex] = useState(0);
-    const length = images.length;
-
-    const previous = () => {
-        const newIndex = index -1
-        setIndex(newIndex < 0 ? length -1 : newIndex);
-    }
-
-    const next = () => {
-        const newIndex = index + 1
-        setIndex(newIndex >= length ? 0 : newIndex)
-    }        
+const BluryBottom = () =>{
+    {/* This code is for making the image to look blury*/}
+    return (        
+        <div 
+            className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black via-black/70 to-transparent opacity-99 pointer-events-none">
+        </div>
+    )
+}
 
     return (
-
-
         <div className="flex-grow">
             <div className="relative flex items-center justify-center h-[100vh] bg-white">
                 <div className="relative overflow-hidden w-full h-full">
-                         <button onClick={previous}>Previous </button>
-                         <button onClick={next}>Next</button>
-                        <Carousel images={images}/>
+                    <Carousel images={ImagesPath}/>
                 </div>
 
-                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black via-black/70 to-transparent opacity-99 pointer-events-none">
-                </div>
+                <BluryBottom />
 
                 <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center text-center pointer-events-none">
                     <div className="text-white px-4 max-w-2xl">
