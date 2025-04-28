@@ -27,10 +27,7 @@ const BluryBottom = () => {
             <div className="flex-grow">
                 <div className="relative flex items-center justify-center h-[100vh] bg-white">
 
-                    <div className="relative overflow-hidden w-full h-full">
-                        <Carousel images={ImagesPath}/>
-                    </div>
-
+                    <Carousel images={ImagesPath}/>
                     <BluryBottom />
 
                     <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center text-center pointer-events-none">

@@ -1,12 +1,16 @@
 // ImagesPath.jsx
-import IHackFirstPage from "../assets/Images/IHack_First_Page.png";
-import AurelisTallerVlan from "../assets/Images/Aurelis_Taller_de_Vlans.png";
+import photo01 from "../assets/Images/Chelimar_dando_algo.jpg";
+import photo02 from "../assets/Images/Foto_de_Actividad_del_sum_con_director.jpg";
+import photo03 from "../assets/Images/Tallara_de_resume.jpg";
 
 export const ImagesPath = [
   {
-    image: IHackFirstPage
+    image: photo01
   },
   {
-    image: AurelisTallerVlan
+    image: photo02
+  },
+  {
+    image:photo03
   }
 ];

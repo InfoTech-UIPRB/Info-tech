@@ -8,7 +8,7 @@ const CarouselItem = ({imagePath, fade}) => {
             className= {
                 `absolute
                  inset-0
-                 w-full 
+                 w-2000 
                  h-full 
                  object-cover 
                  transition-opacity 

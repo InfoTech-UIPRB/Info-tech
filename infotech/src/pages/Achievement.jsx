@@ -8,6 +8,7 @@ import NavBar from "../components/Navbar.jsx";
 import PrimerLugarIHACK2025 from "../assets/Images/Primer_Lugar_IHACK_2025.png"
 import PrimerLugarIHACK2024 from  "../assets/Images/IHack_First_Page.png";
 import SegundoLugarUprBayamon from "../assets/Images/Second_Place_Principante_UPR.png"
+import Footer from "../components/Footer.jsx";
 
 const Achievement = () => {
     return (
@@ -18,9 +19,8 @@ const Achievement = () => {
                       img={PrimerLugarIHACK2025}/>
                 <Card title="Primer Lugar IHack Inter American University Puerto Rico Bayamon"
                       img={PrimerLugarIHACK2024} />
-
-
             </div>
+            <Footer />
 
         </>
 

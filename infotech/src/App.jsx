@@ -5,6 +5,7 @@ import Directive from "./pages/Directive.jsx";
 import Page404 from "./pages/404Page.jsx";
 import Achievement from "./pages/Achievement.jsx"
 import Activity from "./pages/Activity.jsx";
+import Calendar from "./pages/Calendar.jsx";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/pages/directive" element={<Directive />}/>
         <Route path="/pages/achievement" element={<Achievement />}/>
         <Route path="/pages/activity" element={<Activity />} />
+        <Route path="/pages/calendar" element={<Calendar />} />
         <Route path="*" element={<Page404 />} />
       </Routes>
     </RouterProvider>

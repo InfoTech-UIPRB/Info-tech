@@ -1,5 +1,6 @@
 import React from "react";
 import NavBar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const Directive = () => {
 
@@ -41,6 +42,7 @@ const Directive = () => {
                     <MemberCards name="Hacniel Cardona" role="Mentor" />
                 </div>
             </div>
+            <Footer />
         </>
 
     )
