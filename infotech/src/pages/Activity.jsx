@@ -9,9 +9,6 @@ const Activity = () => {
 
         return (
             <>
-            {left && 
-            
-            }
                 <div className="xl:text-4xl md:text-3xl sm:text-2xl text-white font-mono">
                     <div className="flex flex-wrap xl:mb-40 xl:mt-12 md:mb-20 md:mt-2 sm:mb-10 sm:mt-5 p-8">
 
