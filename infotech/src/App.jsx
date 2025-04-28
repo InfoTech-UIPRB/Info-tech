@@ -1,19 +1,23 @@
-import React from 'react' ;
-
-//Components
-import Button from "@mui/material/Button";
-
-//Pages
-import HomePage from './pages/HomePage.jsx'
-
+// App.jsx
+import { BrowserRouter as RouterProvider, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Directive from "./pages/Directive.jsx";
+import Page404 from "./pages/404Page.jsx";
+import Achievement from "./pages/Achievement.jsx"
+import Activity from "./pages/Activity.jsx";
 
 function App() {
-
   return (
-    <>
-      <HomePage />
-    </>
-  )
+    <RouterProvider>
+      <Routes>
+        <Route path="/pages" element={<Home />} />
+        <Route path="/pages/directive" element={<Directive />}/>
+        <Route path="/pages/achievement" element={<Achievement />}/>
+        <Route path="/pages/activity" element={<Activity />} />
+        <Route path="*" element={<Page404 />} />
+      </Routes>
+    </RouterProvider>
+  );
 }
 
-export default App
+export default App;

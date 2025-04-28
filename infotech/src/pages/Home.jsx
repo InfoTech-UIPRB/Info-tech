@@ -8,7 +8,7 @@ import Carousel from "../components/Carousel";
 import NavBar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-const HomePage = () => { 
+const Home = () => { 
 
 const BluryBottom = () => {
     {/* This code is for making the image to look blury*/}
@@ -50,4 +50,4 @@ const BluryBottom = () => {
 
     )
 }
- export default HomePage;
+ export default Home;

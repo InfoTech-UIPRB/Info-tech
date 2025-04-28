@@ -2,38 +2,48 @@ import React, { useState } from "react";
 import { Menu, X } from "lucide-react"; // For icons
 
 import InfotechLogo from "../assets/Images/png_logo_infotech.png"
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  //Make a current index. If i am in Directive page soo the directive link should be green o yellow to indicate where i am.
   const navigation = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Events", href: "/events" },
-    { name: "Contact", href: "/contact" },
+    { name: "Home", href: "../pages/" },
+    { name: "Directive", href: "../pages/directive" },
+    { name: "Achievements", href: "../pages/achievement" },
+    { name: "Activity", href: "../pages/activity" },
+    { name: "Calendar", href: "../pages/calendar"}
   ];
 
   return (
-    <nav className="bg-black shadow-md fixed top-0 left-0 w-full z-50">
+    <nav className="bg-black shadow-md top-0 left-0 w-full z-50">
       {/* The reason that i added max-w-7xl is because that if the screen is to large then the logo and the links will too seperated */}
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         <img src={InfotechLogo} className="h-16"/>
 
-        {/* Desktop Links */}
+        {/* Links for pages that have Large screen */}
         <div className="hidden md:flex space-x-8">
           {navigation.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
+            <Link
+              to = {item.href}
               className="text-white hover:text-yellow-300 transition font-medium"
             >
               {item.name}
-            </a>
+            </Link>
           ))}
+          {/* This is for Joining the assosiation */}
+          <Link
+              to = "https://infotech.fillout.com/t/dtBhkArfxLus"
+              target="_blank"
+              className="text-white hover:text-yellow-300 transition font-medium"
+            >
+              Join
+            </Link>
         </div>
 
-        {/* Mobile menu button */}
+        {/* Mobile menu button(Small Screen) */}
         <div className="md:hidden">
           <button onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X color="white" size={28} /> : <Menu color="white" size={28} />}
@@ -41,7 +51,7 @@ const NavBar = () => {
         </div>
       </div>
 
-      {/* Mobile Links */}
+      {/* Mobile Links(Small Screen) */}
       {isOpen && (
         <div className="md:hidden bg-black shadow-md">
           <div className="flex flex-col items-center space-y-4 py-4">
