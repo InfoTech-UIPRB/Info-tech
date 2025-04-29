@@ -20,9 +20,10 @@ const Carousel = ({images})=>{
     }, [images.length])
 
     return (
-        <>
-           <CarouselItem imagePath={images[image].image} fade={fade}/>
-        </>
+            <div className= {`w-[100vh] h-[50vh]`}>
+                        <CarouselItem imagePath={images[image].image} fade={fade}/>
+            </div>
+
     );
 }
 

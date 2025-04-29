@@ -6,10 +6,9 @@ const CarouselItem = ({imagePath, fade}) => {
             src={imagePath} 
             alt="image" 
             className= {
-                `absolute
-                 inset-0
-                 w-2000 
-                 h-full 
+                `
+                w-full
+                h-full
                  object-cover 
                  transition-opacity 
                  duration-500 

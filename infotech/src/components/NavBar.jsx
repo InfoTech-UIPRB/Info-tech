@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Menu, X } from "lucide-react"; // For icons
+import { Menu, X} from "lucide-react"; // For icons
 
 import InfotechLogo from "../assets/Images/png_logo_infotech.png"
 import { Link } from "react-router-dom";
@@ -34,13 +34,17 @@ const NavBar = () => {
             </Link>
           ))}
           {/* This is for Joining the assosiation */}
-          <Link
-              to = "https://infotech.fillout.com/t/dtBhkArfxLus"
+          <div className="rounded-sm bg-yellow-300 px-2 py-1">
+            <Link
+              to="https://infotech.fillout.com/t/dtBhkArfxLus"
               target="_blank"
-              className="text-white hover:text-yellow-300 transition font-medium"
+              className="text-black hover:text-white transition font-medium"
             >
               Join
             </Link>
+          </div>
+
+
         </div>
 
         {/* Mobile menu button(Small Screen) */}
