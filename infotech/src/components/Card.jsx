@@ -7,7 +7,7 @@ const Card = ({text, title, img, alt}) => {
                 <img className="object-cover" src={img} />
             </div>
             <div className="px-6 py-4">
-                <div className="font-bold text-white text-xl mb-2">{title}</div>
+                <div className="font-bold text-white text-lg mb-2">{title}</div>
                 <p className="text-white text-base">
                 {text}
                 </p>

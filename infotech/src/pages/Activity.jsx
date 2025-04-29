@@ -26,7 +26,7 @@ const Activity = () => {
                     <div className="text-yellow-300 font-bold lg:text-4xl md:text-3xl text-xl mb-2">
                         {title}
                     </div>
-                    <div className="lg:text-3xl md:text-xl text-sm font-mono text-left">
+                    <div className="lg:text-3xl md:text-xl text-sm font-mono ">
                         {text}
                     </div>
                 </div>

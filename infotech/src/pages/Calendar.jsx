@@ -48,11 +48,16 @@ const toggleSideBar = () =>{
 
   const blankDays = Array(startingDay).fill(null);
   const days = Array.from({ length: daysInMonth }, (_, i) => i + 1);
+
+  //Days that have activities
   const activitiesDates = [20, 19, 10];
 
+  //When the day is in the array(activitiesDates) then we will get the information of the activities
   const allActivityInformation = {
-    20: {title: 'Cyber', room: 'F201', description: 'example'},
-    10: {title: 'Computer Science', room: 'F203', description: 'example'}
+    20: {title: 'Linux101', room: 'F201', description: 'I use Arch by the way'},
+    10: {title: 'Introduction to Github', room: 'F203', description: 'commit push force'},
+    19: {title: 'Vlans', room: 'F201', description: 'Vlans stuff'}
+
   }
   return (
     <>
@@ -95,9 +100,9 @@ const toggleSideBar = () =>{
           ))}
         </div>
       </div>
-    {isSideBarOpen && (
-    <Sidebar />
-    )}
+      {isSideBarOpen && (
+      <Sidebar />
+      )}
     <Footer />
     </>
   );
