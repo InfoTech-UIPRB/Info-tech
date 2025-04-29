@@ -12,18 +12,18 @@ import TallerDeComputerScience from "../assets/Images/Josue_Taller_De_Github_img
 const Activity = () => {
     const TypeOfActivity = ({ left = false, text, title, img, alt }) => {
         return (
-            <div className={`flex ${left ? "flex-row-reverse" : "flex-row"}  gap-6 mx-4 mb-7`}>
+            <div className={`flex ${left ? "flex-row-reverse" : "flex-row"}  gap-6 mx-7 mb-18`}>
                 {/* Image */}
                 <div className="flex-shrink-0">
-                    <img className="lg:h-150 lg:w-180 md:h-80 md:w-90 h-48 w-52 object-cover rounded" src={img} alt={alt || "Activity Image"} />
+                    <img className="lg:h-120 lg:w-150 md:h-80 md:w-90 h-48 w-52 object-cover rounded" src={img} alt={alt || "Activity Image"} />
                 </div>
     
                 {/* Text Section */}
                 <div className="text-white flex-1/2">
-                    <div className="font-bold lg:text-6xl md:text-3xl text-xl mb-2 text-cente">
+                    <div className="text-yellow-300 font-bold lg:text-4xl md:text-3xl text-xl mb-2 text-cente">
                         {title}
                     </div>
-                    <div className="lg:text-4xl md:text-xl text-sm font-mono text-left">
+                    <div className="lg:text-3xl md:text-xl text-sm font-mono text-left">
                         {text}
                     </div>
                 </div>

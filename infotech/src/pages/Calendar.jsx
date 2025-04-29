@@ -7,6 +7,36 @@ const Calendar = () => {
   const [activityInformation, setActivityInformation] = useState([
     { title: '', description: '', room: '' }
   ]);
+
+  const Sidebar = () => {
+    return (
+      <div
+      className="fixed inset-0 flex h-full w-full bg-black/40"
+      onClick={toggleSideBar}
+    >
+      {/* Sidebar */}
+      <div
+        className="relative bg-white/80 backdrop-blur-md w-64 max-w-xs h-full p-4 shadow-lg"
+        onClick={(e) => e.stopPropagation()} // prevent closing when clicking inside sidebar
+      >
+        <div className="flex justify-between items-center mb-6">
+          <h2 className="text-lg font-bold">Information of Activity</h2>
+          <button
+            onClick={toggleSideBar}
+            className="text-gray-500 hover:text-gray-800"
+          >
+            Close
+          </button>
+        </div>
+          <ul className="space-y-4">
+              <li>{activityInformation.title}</li>
+              <li>{activityInformation.room}</li>
+              <li>{activityInformation.description}</li>
+          </ul>
+      </div>
+    </div>
+    )
+  }
   
 const toggleSideBar = () =>{
   setIsSidebarOpen(!isSideBarOpen)
@@ -46,55 +76,28 @@ const toggleSideBar = () =>{
 
         {/* Actual days */}
         {days.map((day) => (
-  <div
-    key={day}
-    className={`p-2 rounded-lg ${activitiesDates.includes(day) ? "bg-green-600" : "bg-gray-700"} text-white hover:bg-blue-500 transition-colors cursor-pointer`}
-    onClick={() => {
-      if (activitiesDates.includes(day)) {
-        setActivityInformation({
-          title: allActivityInformation[day].title,
-          description: allActivityInformation[day].description,
-          room: allActivityInformation[day].room,
-        });
-        toggleSideBar();
-      }
-    }}
-  >
-    {day}
-  </div>
-))}
-
+          <div
+            key={day}
+            className={`p-2 rounded-lg ${activitiesDates.includes(day) ? "bg-green-600" : "bg-gray-700"} text-white hover:bg-blue-500 transition-colors cursor-pointer`}
+            onClick={() => {
+              if (activitiesDates.includes(day)) {
+                setActivityInformation({
+                  title: allActivityInformation[day].title,
+                  description: allActivityInformation[day].description,
+                  room: allActivityInformation[day].room,
+                });
+                toggleSideBar();
+              }
+            }}
+          >
+              {day}
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
     {isSideBarOpen && (
-  <div
-    className="fixed inset-0 flex h-full w-full bg-black/40"
-    onClick={toggleSideBar}
-  >
-    {/* Sidebar */}
-    <div
-      className="relative bg-white/80 backdrop-blur-md w-64 max-w-xs h-full p-4 shadow-lg"
-      onClick={(e) => e.stopPropagation()} // prevent closing when clicking inside sidebar
-    >
-      <div className="flex justify-between items-center mb-6">
-        <h2 className="text-lg font-bold">Information of Activity</h2>
-        <button
-          onClick={toggleSideBar}
-          className="text-gray-500 hover:text-gray-800"
-        >
-          Close
-        </button>
-      </div>
-        <ul className="space-y-4">
-            <li className="hover:text-blue-500 cursor-pointer">{activityInformation.title}</li>
-            <li className="hover:text-blue-500 cursor-pointer">{activityInformation.room}</li>
-            <li className="hover:text-blue-500 cursor-pointer">{activityInformation.description}</li>
-        </ul>
-    </div>
-  </div>
-)}
-
-
+    <Sidebar />
+    )}
     <Footer />
     </>
   );
