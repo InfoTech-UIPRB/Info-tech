@@ -3,3 +3,19 @@
 body {
     background-color: black;
 }
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateX(100);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+}
+
+.fadeInUp-animation {
+    animation: 2.5s fadeInUp;
+}

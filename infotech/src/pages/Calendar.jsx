@@ -57,7 +57,7 @@ const toggleSideBar = () =>{
   return (
     <>
     <NavBar />
-    <div className="p-4 max-w-4xl mx-auto">
+    <div className="p-4 max-w-4xl mx-auto fadeInUp-animation">
       <h2 className="text-3xl font-bold text-center mb-4 text-white">April 2025</h2>
 
       {/* Days of the week */}

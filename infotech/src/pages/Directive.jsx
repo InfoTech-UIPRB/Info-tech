@@ -49,7 +49,7 @@ const Directive = () => {
     return (
         <>
             <NavBar />
-            <div className="flex justify-center">
+            <div className="flex justify-center fadeInUp-animation">
                 <div
                     className="md:w-full
                                 sm:w-110

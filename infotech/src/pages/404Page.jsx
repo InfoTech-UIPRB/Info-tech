@@ -1,13 +1,14 @@
 import React from "react";
 import NavBar from "../components/Navbar";
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 
 const Page404 = () => {
 
             return (
               <>
                 <NavBar />
-                <div className="grid h-full place-items-center  px-6 py-24 sm:py-32 lg:px-8">
+                <div className="grid h-full place-items-center px-6 py-24 sm:py-32 lg:px-8 fadeInUp-animation">
                   <div className="text-center">
                     <p className=" text-7xl font-semibold text-yellow-300">404</p>
                     <h1 className="mt-4 text-5xl font-semibold tracking-tight text-balance text-yellow-300 sm:text-7xl">
@@ -24,6 +25,7 @@ const Page404 = () => {
 
                   </div>
                 </div>
+                <Footer />
               </>
             )
 }

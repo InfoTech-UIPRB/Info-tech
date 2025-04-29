@@ -24,9 +24,9 @@ const BluryBottom = () => {
         <NavBar />
 
         {/* Body of Page */}
-            <div className="flex-grow">
+            <div className="flex-grow fadeInUp-animation">
                 <div className="relative flex items-center justify-center h-[70vh] text-white">
-                    <div >
+                    <div>
                         <h1 className="text-6xl text-center font-bold font-mono mb-4">Welcome to InfoTech!</h1>                    
                         <Carousel images={ImagesPath}/>
                         <BluryBottom />
