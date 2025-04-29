@@ -20,7 +20,8 @@ const Carousel = ({images})=>{
     }, [images.length])
 
     return (
-            <div className= {`md:w-[100vh] h-[50vh]`}>
+
+            <div className= {`w-[100vh] h-[50vh]`}>
                         <CarouselItem imagePath={images[image].image} fade={fade}/>
             </div>
 
