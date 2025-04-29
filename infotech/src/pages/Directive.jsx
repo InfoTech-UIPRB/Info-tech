@@ -17,10 +17,14 @@ const Directive = () => {
     const MemberCards = ({name, role, img, linkedin, gitHub, mail}) => {
         return (
             <div className="flex flex-col items-center pb-10 pt-10 border-3 border-white">
+                {/* Image */}
                 <img className="w-35 h-35 object-cover rounded-full shadow-lg" src={img}
                      alt="Image of Directive Member" />
+                {/* Name */}
                 <h5 className="mb-1 text-xl font-medium text-white text-center">{name}</h5>
+                {/* Role */}
                 <span className="text-sm text-gray-500">{role}</span>
+                {/* Links */}
                 <div className="flex gap-5 pt-5">
                     {gitHub &&
                         <a href={gitHub} target="_blank">
@@ -52,8 +56,8 @@ const Directive = () => {
             <div className="flex justify-center fadeInUp-animation">
                 <div
                     className="md:w-full
-                                sm:w-110
-                                w-60
+                               sm:w-110
+                               w-60
                                max-w-6xl
                                grid grid-cols-1 
                                sm:grid-cols-2 

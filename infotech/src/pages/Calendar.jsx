@@ -29,9 +29,9 @@ const Calendar = () => {
           </button>
         </div>
           <ul className="space-y-4">
-              <li>{activityInformation.title}</li>
-              <li>{activityInformation.room}</li>
-              <li>{activityInformation.description}</li>
+              <li>Title: {activityInformation.title}</li>
+              <li>Room: {activityInformation.room}</li>
+              <li>Description: {activityInformation.description}</li>
           </ul>
       </div>
     </div>

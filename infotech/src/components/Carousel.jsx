@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
-import CarouselItem from "./CarouselItem";
 
 const Carousel = ({images})=>{
-    const [image, setImage] = useState(0);
+    const [index, setIndex] = useState(0);
     const [fade, setFade] = useState(true)
 
     useEffect(() => {
@@ -11,7 +10,7 @@ const Carousel = ({images})=>{
             setFade(false)
 
             setTimeout(() => {
-                setImage(prevState => (prevState + 1 >= images.length) ? prevState = 0 : prevState + 1)
+                setIndex(prevState => (prevState + 1 >= images.length) ? prevState = 0 : prevState + 1)
                 setFade(true)
             }, 300)
 
@@ -20,12 +19,20 @@ const Carousel = ({images})=>{
     }, [images.length])
 
     return (
-
-            <div className= {`w-[100vh] h-[50vh]`}>
-                        <CarouselItem imagePath={images[image].image} fade={fade}/>
-            </div>
-
-    );
+        <div className="relative w-full md:w-3/4 lg:w-2/3 h-[60vh] mx-auto overflow-hidden rounded-lg">
+          <img
+            src={images[index].image}
+            alt={`Slide ${index + 1}`}
+            className={`
+              absolute inset-0
+              w-full h-full
+              object-cover
+              transition-opacity duration-500 ease-in-out
+              ${fade ? "opacity-100" : "opacity-0"}
+            `}
+          />
+        </div>
+      );
 }
 
 export default Carousel;
