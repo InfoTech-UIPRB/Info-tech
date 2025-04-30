@@ -55,7 +55,7 @@ const toggleSideBar = () =>{
   //When the day is in the array(activitiesDates) then we will get the information of the activities
   const allActivityInformation = {
     20: {title: 'Linux101', room: 'F201', description: 'I use Arch by the way'},
-    10: {title: 'Introduction to Github', room: 'F203', description: 'commit push force'},
+    10: {title: 'Introduction to Github', room: 'F203', description: 'We give workshops on Linux and Capture the Flag (CTF) to provide students with hands-on experience in cybersecurity.'},
     19: {title: 'Vlans', room: 'F201', description: 'Vlans stuff'}
 
   }
