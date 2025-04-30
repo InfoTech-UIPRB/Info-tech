@@ -30,12 +30,12 @@ const Home = () => {
             </span>
         </div>
 
-          <div className="mt-22 w-full flex justify-center">
+          <div className="mt-22 md:w-full w-115 flex justify-center">
             <Carousel images={ImagesPath} />
             <BlurryOverlay />
           </div>
 
-          <p className="absolute bottom-6 max-w-5xl text-center text-2xl font-bold text-white drop-shadow-md px-4">
+          <p className="absolute bottom-6 max-w-5xl text-center  lg:text-2xl md:text-lg font-bold text-white drop-shadow-md px-4">
             InfoTech is the student association of the Informatics department at the
             Interamerican University of Puerto Rico, Bayamón campus. We host weekly
             events and gatherings to foster a welcoming space for growth and
