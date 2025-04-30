@@ -2,18 +2,19 @@ import React, { useState } from "react";
 import { Menu, X} from "lucide-react"; // For icons
 
 import InfotechLogo from "../assets/Images/png_logo_infotech.png"
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const currentPage = useLocation()
 
   //Make a current index. If i am in Directive page soo the directive link should be green o yellow to indicate where i am.
   const navigation = [
-    { name: "Home", href: "../pages/" },
-    { name: "Directive", href: "../pages/directive" },
-    { name: "Achievements", href: "../pages/achievement" },
-    { name: "Activity", href: "../pages/activity" },
-    { name: "Calendar", href: "../pages/calendar"}
+    { name: "Home", href: "/" },
+    { name: "Directive", href: "/directive" },
+    { name: "Achievements", href: "/achievement" },
+    { name: "Activity", href: "/activity" },
+    { name: "Calendar", href: "/calendar"}
   ];
 
   return (
@@ -28,7 +29,7 @@ const NavBar = () => {
           {navigation.map((item) => (
             <Link
               to = {item.href}
-              className="text-white hover:text-yellow-300 transition font-medium"
+              className={`${currentPage.pathname == item.href ? "text-yellow-300" : "text-white"} hover:text-yellow-300 transition font-medium`}
             >
               {item.name}
             </Link>
@@ -59,16 +60,24 @@ const NavBar = () => {
       {isOpen && (
         <div className="md:hidden bg-black shadow-md">
           <div className="flex flex-col items-center space-y-4 py-4">
-            {navigation.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-white hover:text-yellow-300 transition font-medium"
-                onClick={() => setIsOpen(false)}
-              >
-                {item.name}
-              </a>
-            ))}
+          {navigation.map((item) => (
+            <Link
+              to = {item.href}
+              className={`${currentPage.pathname == item.href ? "text-yellow-300" : "text-white"} transition font-medium`}
+            >
+              {item.name}
+            </Link>
+          ))}
+          {/* This is for Joining the assosiation */}
+          <div className="rounded-sm bg-yellow-300 px-2 py-1">
+            <Link
+              to="https://infotech.fillout.com/t/dtBhkArfxLus"
+              target="_blank"
+              className="text-black hover:text-white transition font-medium"
+            >
+              Join
+            </Link>
+          </div>
           </div>
         </div>
       )}

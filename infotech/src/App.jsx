@@ -11,11 +11,11 @@ function App() {
   return (
     <RouterProvider>
       <Routes>
-        <Route path="/pages" element={<Home />} />
-        <Route path="/pages/directive" element={<Directive />}/>
-        <Route path="/pages/achievement" element={<Achievement />}/>
-        <Route path="/pages/activity" element={<Activity />} />
-        <Route path="/pages/calendar" element={<Calendar />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/directive" element={<Directive />}/>
+        <Route path="/achievement" element={<Achievement />}/>
+        <Route path="/activity" element={<Activity />} />
+        <Route path="/calendar" element={<Calendar />} />
         <Route path="*" element={<Page404 />} />
       </Routes>
     </RouterProvider>
