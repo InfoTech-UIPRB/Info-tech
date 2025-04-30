@@ -19,7 +19,7 @@ const Carousel = ({images})=>{
     }, [images.length])
 
     return (
-        <div className="relative w-full md:w-3/4 lg:w-2/3 h-[60vh] mx-auto overflow-hidden rounded-lg">
+        <div className="relative w-full  md:w-3/4 lg:w-2/3 md:h-[60vh] h-[50vh] mx-auto overflow-hidden rounded-lg">
           <img
             src={images[index].image}
             alt={`Slide ${index + 1}`}

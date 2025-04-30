@@ -21,7 +21,7 @@ const Home = () => {
         <div className="relative w-full h-[70vh] flex flex-col items-center justify-center">
 
 
-        <div className="absolute top-6 w-full flex flex-col items-center px-4 z-10">
+        <div className=" top-6 w-full flex flex-col items-center px-4">
             <h1 className="lg:text-5xl text-4xl font-bold text-white drop-shadow-lg text-center">
                 Welcome to InfoTech!
             </h1>
@@ -30,7 +30,7 @@ const Home = () => {
             </span>
         </div>
 
-          <div className="mt-22 md:w-full w-115 flex justify-center">
+          <div className=" md:w-full w-115 flex justify-center">
             <Carousel images={ImagesPath} />
             <BlurryOverlay />
           </div>
