@@ -5,15 +5,17 @@ import NavBar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 const Home = () => {
-  const BlurryOverlay = () => (
-<div className="absolute bottom-0 left-0 w-full lg:h-120 h-54 bg-gradient-to-t from-black via-black/70 to-transparent pointer-events-none" />
-  );
+  const BlurryOverlay = () => {
+    return (
+      <div className="absolute bottom-0 left-0 w-full lg:h-120 h-54 bg-gradient-to-t from-black via-black/70 to-transparent pointer-events-none" />
+    )
+  };
 
   return (
     <>
       <NavBar />
 
-      <div className="max-sm:mt-16 flex-grow flex items-center justify-center mb-10">
+      <div className="max-sm:mt-16 flex-grow flex items-center justify-center mb-10 fadeInUp-animation">
         <div className="relative w-full h-[70vh] flex flex-col items-center justify-center">
 
 
