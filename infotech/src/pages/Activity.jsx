@@ -15,10 +15,10 @@ const Activity = () => {
 
     const TypeOfActivity = ({ left = false, text, title, img, alt }) => {
         return (
-            <div className={`flex ${left ? "flex-row-reverse" : "flex-row"}  gap-6 mx-7 mb-18`}>
+            <div className={`flex ${left ? "flex-row-reverse" : "flex-row"} max-sm:flex-col max-sm:text-center gap-6 mx-7 mb-18`}>
                 {/* Image */}
-                <div className="flex-shrink-0">
-                    <img className="lg:h-120 lg:w-150 md:h-80 md:w-90 h-48 w-52 object-cover rounded border border-yellow-300 " src={img} alt={alt || "Activity Image"} />
+                <div className="flex-shrink-0 max-sm:mx-auto">
+                    <img className="lg:h-120 lg:w-140 md:h-80 md:w-90 h-48 w-52 object-cover rounded border border-yellow-300" src={img} alt={alt || "Activity Image"} />
                 </div>
     
                 {/* Text Section */}
@@ -38,9 +38,9 @@ const Activity = () => {
     return (
         <>
             <NavBar />
-                <div className="p-6 fadeInUp-animation">
+                <div className="p-6 fadeInUp-animation ">
                   {/* Dropdown */}
-                  <div className="mb-4 ml-8">
+                  <div className="md:mb-4 mb-10 md:ml-8 max-sm:flex max-sm:justify-center">
                     <select
                       className="p-2 border text-yellow-300 border-gray-300 rounded-md lg:text-2xl md:text-lg text-sm"
                       value={selectedOption}
