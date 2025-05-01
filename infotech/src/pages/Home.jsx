@@ -8,7 +8,7 @@ const Home = () => {
   const BlurryOverlay = () => (
     <div
       className="pointer-events-none 
-                 absolute inset-0 
+                 absolute w-full h-full
                  bg-gradient-to-t from-black via-black/70 to-transparent"
     />
   );
@@ -17,7 +17,7 @@ const Home = () => {
     <>
       <NavBar />
 
-      <div className="flex-grow flex items-center justify-center">
+      <div className="flex-grow flex items-center justify-center mb-10">
         <div className="relative w-full h-[70vh] flex flex-col items-center justify-center">
 
 
@@ -30,12 +30,12 @@ const Home = () => {
             </span>
         </div>
 
-          <div className=" md:w-full w-115 flex justify-center">
+          <div className="md:w-full w-full flex justify-center max-sm:p-15">
             <Carousel images={ImagesPath} />
             <BlurryOverlay />
           </div>
 
-          <p className="absolute bottom-6 max-w-5xl text-center  lg:text-2xl md:text-lg font-bold text-white drop-shadow-md px-4">
+          <p className="absolute bottom-6 max-w-5xl text-center lg:text-2xl md:text-lg text-sm lg:px-0 md:px-5 sm:px-15 px-15 font-bold text-white drop-shadow-md">
             InfoTech is the student association of the Informatics department at the
             Interamerican University of Puerto Rico, Bayamón campus. We host weekly
             events and gatherings to foster a welcoming space for growth and
