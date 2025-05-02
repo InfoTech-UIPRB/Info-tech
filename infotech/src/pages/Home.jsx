@@ -23,7 +23,7 @@ const Home = () => {
             <h1 className="lg:text-5xl text-4xl font-bold text-white drop-shadow-lg text-center">
                 Welcome to InfoTech!
             </h1>
-            <span className="mt-0 text-lg font-normal text-white drop-shadow-lg text-center">
+            <span className="text-lg font-normal text-white drop-shadow-lg text-center">
                 Connecting students, fostering innovation
             </span>
         </div>
