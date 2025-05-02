@@ -1,14 +1,17 @@
+//Components
 import React, { useState } from "react";
-import { Menu, X} from "lucide-react"; // For icons
-
-import InfotechLogo from "../assets/Images/png_logo_infotech.png"
 import { Link, useLocation } from "react-router-dom";
+
+//Images
+import InfotechLogo from "../assets/Images/png_logo_infotech.png"
+
+// Icons
+import { Menu, X} from "lucide-react"; 
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const currentPage = useLocation()
 
-  //Make a current index. If i am in Directive page soo the directive link should be green o yellow to indicate where i am.
   const navigation = [
     { name: "Home", href: "/" },
     { name: "Directive", href: "/directive" },
