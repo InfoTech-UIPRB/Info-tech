@@ -28,7 +28,7 @@ const Home = () => {
             </span>
         </div>
 
-          <div className="md:w-full w-full flex justify-center max-sm:p-15">
+          <div className="w-full flex justify-center max-sm:p-15">
               <Carousel images={ImagesPath} />
               <BlurryOverlay />            
           </div>
