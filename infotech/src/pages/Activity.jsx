@@ -13,6 +13,7 @@ import TallerDeComputerScience from "../assets/Images/Josue_Taller_De_Github_img
 const Activity = () => {
     const [selectedOption, setSelectedOption] = useState("option1");
 
+    // Change name of component
     const TypeOfActivity = ({ left = false, text, title, img, alt }) => {
         return (
             <div className={`flex ${left ? "flex-row-reverse" : "flex-row"} max-sm:flex-col max-sm:text-center gap-6 mx-7 mb-18`}>
@@ -55,12 +56,27 @@ const Activity = () => {
                   <div>
                     {selectedOption === "option1" ? (
                         <>
+                        {}
                             <TypeOfActivity title="Cyber Security" text="We give workshops on Linux and Capture the Flag (CTF) to provide students with hands-on experience in cybersecurity." img={TallerDeCyber} left={true}/>
                             <TypeOfActivity title="Computer Science" text="We offer workshops on Mobile Applications, GitHub, and more, with additional topics coming soon. This semester, we're also hosting an event called Leet Code 101 for students who want to improve their problem-solving skills and get hands-on experience with coding challenges." img={TallerDeComputerScience} />
                             <TypeOfActivity title="Networking" text="We give workshops on VLANs and, this semester, we will also offer workshops on networking protocols to help students build a strong foundation in networking." img={TallerDeNetworking} left={true}/> 
                         </>
                     ) : (
                         <>
+                            <TypeOfActivity title="Primera reunion de Asosacion" />
+                            <TypeOfActivity title="Mobile Development"/>
+                            <TypeOfActivity title="Tour de HUB787" />
+                            <TypeOfActivity title="Orientacion de Oracle" />
+                            <TypeOfActivity title="Fundamentos de Auditoria de Sistemas de Informacion" />
+                            <TypeOfActivity title="Cyber Defence: Zero to Hero" />
+                            <TypeOfActivity title="Charla sobre emprendimiento en technologia(Terminal 34)" />
+                            <TypeOfActivity title="Taller de OSINT" />
+                            <TypeOfActivity title="Phising Workshop" />
+                            <TypeOfActivity title="LeetcoCode 101" />
+                            <TypeOfActivity title="Inteligencia Artificial" />
+                            <TypeOfActivity title="Bases de Datos" />
+                            <TypeOfActivity title="Introduccion a Reverse Engineering usando GHIDRA" />
+                            <TypeOfActivity title="Charla sobre CyberSecurity y Oportunidades de Internados" />
                             <TypeOfActivity title="Introduction to Github" text="We give workshops on Linux and Capture the Flag (CTF) to provide students with hands-on experience in cybersecurity." img={TallerDeComputerScience} left={true}/>
                             <TypeOfActivity title="Linux 101" text="We offer workshops on Mobile Applications, GitHub, and more, with additional topics coming soon. This semester, we're also hosting an event called Leet Code 101 for students who want to improve their problem-solving skills and get hands-on experience with coding challenges." img={TallerDeCyber} />
                             <TypeOfActivity title="Vlans" text="We give workshops on VLANs and, this semester, we will also offer workshops on networking protocols to help students build a strong foundation in networking." img={TallerDeNetworking} left={true}/> 
