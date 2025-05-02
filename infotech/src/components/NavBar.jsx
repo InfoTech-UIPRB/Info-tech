@@ -21,7 +21,7 @@ const NavBar = () => {
   ];
 
   return (
-    <nav className="bg-black shadow-md top-0 left-0 w-full z-50">
+    <nav className="shadow-md top-0 left-0 w-full z-50">
       {/* The reason that i added max-w-7xl is because that if the screen is to large then the logo and the links will too seperated */}
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
