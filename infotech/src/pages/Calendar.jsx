@@ -38,32 +38,31 @@ const Calendar = () => {
     )
   }
   
-const toggleSideBar = () =>{
-  setIsSidebarOpen(!isSideBarOpen)
-}
+  const toggleSideBar = () =>{
+    setIsSidebarOpen(!isSideBarOpen)
+  }
 
   const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  const daysInMonth = 30;
-  const startingDay = 2;
+  const daysInMonth = 31;
+  const startingDay = 4; //In what day does the month start. For example may starts in Thrusday, soo that means Sun, Mon, Tues, Weds will be blanck.
 
   const blankDays = Array(startingDay).fill(null);
   const days = Array.from({ length: daysInMonth }, (_, i) => i + 1);
 
   //Days that have activities
-  const activitiesDates = [20, 19, 10];
+  //Example: 20
+  const activitiesDates = [];
 
   //When the day is in the array(activitiesDates) then we will get the information of the activities
+  //Example: 20: {title: 'Linux101', room: 'F201', description: 'I use Arch by the way'},
   const allActivityInformation = {
-    20: {title: 'Linux101', room: 'F201', description: 'I use Arch by the way'},
-    10: {title: 'Introduction to Github', room: 'F203', description: 'We give workshops on Linux and Capture the Flag (CTF) to provide students with hands-on experience in cybersecurity.'},
-    19: {title: 'Vlans', room: 'F201', description: 'Vlans stuff'}
 
   }
   return (
     <>
     <NavBar />
     <div className="p-4 max-w-4xl mx-auto fadeInUp-animation">
-      <h2 className="text-3xl font-bold text-center mb-4 text-white">April 2025</h2>
+      <h2 className="text-3xl font-bold text-center mb-4 text-white">May 2025</h2>
 
       {/* Days of the week */}
       <div className="grid grid-cols-7 gap-2 text-center text-gray-300 mb-2">
