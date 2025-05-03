@@ -1,7 +1,10 @@
 import React from "react";
+
+//Components
 import NavBar from "../components/Navbar";
 import Footer from "../components/Footer";
 
+//Images
 import President from "../assets/PFP/chelimar-pfp.png"
 import Nopfp from "../assets/PFP/nopfp.jpg"
 import Secretaria from "../assets/PFP/angelie-pfp.png"
@@ -9,12 +12,14 @@ import Vocal01 from "../assets/PFP/jeremy-pfp.jpg"
 import Vocal04 from "../assets/PFP/nordiel-pfp.png"
 import Vocal03 from "../assets/PFP/edwin-pfp.jpg"
 import Vocal02 from "../assets/PFP/aurelis-pfp.png"
+
+//Icons
 import { GithubIcon, LinkedinIcon, Mail } from "lucide-react";
 
 
 const Directive = () => {
 
-    const MemberCards = ({name, role, img, linkedin, gitHub, mail}) => {
+    const MemberCards = ({name, role, img=Nopfp, linkedin, gitHub, mail}) => {
         return (
             <div className="flex flex-col items-center pb-10 pt-10 border-3 border-white">
                 {/* Image */}
@@ -67,16 +72,60 @@ const Directive = () => {
                                gap-6 
                                p-4">
 
-                    <MemberCards name="Chelimar Morales" role="President" img={President}/>
-                    <MemberCards name="Carlos Negron" role="Vice President" img={Nopfp}/>
-                    <MemberCards name="Josue Vazquez" role="Tesorero" img={Nopfp}/>
-                    <MemberCards name="Angeli" role="Secretaria" img={Secretaria}/>
-                    <MemberCards name="Jeremmy Leiva" role="Vocal" img={Vocal01}/>
-                    <MemberCards name="Aurelis Otero" role="Vocal" img={Vocal02}/>
-                    <MemberCards name="Edwin Vazquez" role="Vocal" img={Vocal03} linkedin="https://www.linkedin.com/in/edwin-vazquez-a8a208279/" gitHub="https://github.com/Revokeez" mail="edwinmvazquez1@gmail.com"/>
-                    <MemberCards name="Nordiel Martinez" role="Vocal" img={Vocal04}/>
-                    <MemberCards name="Crystal Mercado" role="Vocal" img={Nopfp}/>
-                    <MemberCards name="Hacniel Cardona" role="Mentor" img={Nopfp}/>
+                    <MemberCards 
+                        name="Chelimar Morales"
+                        role="President"
+                        img={President}
+                        linkedin="https://www.linkedin.com/in/chelimar-morales/"
+                        mail=""
+                    />
+                    <MemberCards
+                        name="Carlos Negron"
+                        role="Vice President" 
+                    />
+                    <MemberCards 
+                        name="Josue Vazquez" 
+                        role="Tesorero" 
+                    />
+                    <MemberCards 
+                        name="Jeremmy Leiva"
+                        role="Vocal"
+                        img={Vocal01}
+                        linkedin="https://www.linkedin.com/in/jeremmy-leiva-aguilar-jem/"
+                    />
+                    <MemberCards 
+                        name="Aurelis Otero" 
+                        role="Vocal"
+                        img={Vocal02}
+                        linkedin="https://www.linkedin.com/in/aurelis-otero-02348428a/"
+                    />
+                    <MemberCards 
+                        name="Edwin Vazquez"
+                        role="Vocal"
+                        img={Vocal03}
+                        linkedin="https://www.linkedin.com/in/edwin-vazquez-a8a208279/"
+                        gitHub="https://github.com/Revokeez"
+                        mail="edwinmvazquez1@gmail.com"
+                    />
+                    <MemberCards
+                        name="Nordiel Martinez" 
+                        role="Vocal" 
+                        img={Vocal04}
+                        linkedin="https://www.linkedin.com/in/nordielmartinez/"
+                        gitHub="https://github.com/nordiel"
+                    />
+                    <MemberCards 
+                        name="Crystal Mercado"
+                        role="Vocal"
+                        linkedin="https://www.linkedin.com/in/crystal-mercado/" />
+                    <MemberCards 
+                        name="Hacniel Cardona" 
+                        role="Mentor" 
+                    />
+                    <MemberCards 
+                        name="Jose Rodriguez" 
+                        role="Director" 
+                    />
                 </div>
             </div>
             <Footer />

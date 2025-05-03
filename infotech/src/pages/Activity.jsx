@@ -34,8 +34,7 @@ const Activity = () => {
             </div>
         )
     }
-    
-      
+       
     return (
         <>
             <NavBar />
