@@ -82,6 +82,7 @@ const Directive = () => {
                     <MemberCards
                         name="Carlos Negron"
                         role="Vice President" 
+                        mail="cnegron6786@interbayamon.edu"
                     />
                     <MemberCards 
                         name="Josue Vazquez" 
@@ -117,7 +118,9 @@ const Directive = () => {
                     <MemberCards 
                         name="Crystal Mercado"
                         role="Vocal"
-                        linkedin="https://www.linkedin.com/in/crystal-mercado/" />
+                        linkedin="https://www.linkedin.com/in/crystal-mercado/"
+                        mail="cmercado7908@interbayamon.edu"
+                        />
                     <MemberCards 
                         name="Hacniel Cardona" 
                         role="Mentor" 
