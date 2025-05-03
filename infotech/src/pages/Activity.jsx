@@ -12,11 +12,14 @@ import TallerDeComputerScience from "../assets/Images/Josue_Taller_De_Github_img
 import TallerDeMobileDevelopment from "../assets/Images/Activities/mobile_development.jpeg"
 import PrimeraReunion from "../assets/Images/Activities/primera_reunion_de_asosacion.jpeg"
 
+//Icons
+import { Link } from "lucide-react";
+
 const Activity = () => {
     const [selectedOption, setSelectedOption] = useState("option1");
 
     // Change name of component
-    const TypeOfActivity = ({ left = false, text, title, img, alt }) => {
+    const TypeOfActivity = ({ left = false, text, title, img, social, alt }) => {
         return (
             <div className={`flex ${left ? "flex-row-reverse" : "flex-row"} max-sm:flex-col max-sm:text-center gap-6 mx-7 mb-18`}>
                 {/* Image */}
@@ -32,6 +35,12 @@ const Activity = () => {
                     <div className="lg:text-3xl md:text-xl text-sm font-mono ">
                         {text}
                     </div>
+                    {social && typeof social == "string" &&
+                        <a href={social} target="_blank" className="mt-2">
+                            <Link size={40}/>
+                        </a>
+                    }
+   
                 </div>
             </div>
         )
@@ -77,6 +86,7 @@ const Activity = () => {
                             <TypeOfActivity 
                                 title="Tour de HUB787" 
                                 text="Visitamos el data center HUB787, el único centro de datos certificado en Puerto Rico. Durante el recorrido, aprendimos sobre la entrada de cables submarinos, la nube física de AWS, servidores, el concepto de colocación, IoT y mucho más."
+                                social="https://www.instagram.com/p/DJJwYkCRiKy/?img_index=2&igsh=MWJwaDZvcXVlYmloaw=="
                             />
                             <TypeOfActivity 
                                 title="Orientación de Oracle" 
