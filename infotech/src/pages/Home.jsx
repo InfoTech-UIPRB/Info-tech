@@ -15,11 +15,11 @@ const Home = () => {
     <>
       <NavBar />
 
-      <div className="max-sm:mt-16 flex-grow flex items-center justify-center mb-10 fadeInUp-animation">
+      <div className="max-sm:mt-18 mt-5 flex-grow flex items-center justify-center mb-10 fadeInUp-animation">
         <div className="relative w-full h-[70vh] flex flex-col items-center justify-center">
 
 
-        <div className=" top-6 w-full flex flex-col items-center px-4">
+        <div className="w-full flex flex-col items-center px-4">
             <h1 className="lg:text-5xl text-4xl font-bold text-white drop-shadow-lg text-center">
                 Welcome to InfoTech!
             </h1>
