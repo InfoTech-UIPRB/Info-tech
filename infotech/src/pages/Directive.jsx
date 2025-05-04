@@ -13,13 +13,18 @@ import Vocal04 from "../assets/PFP/nordiel-pfp.png"
 import Vocal03 from "../assets/PFP/edwin-pfp.jpg"
 import Vocal02 from "../assets/PFP/aurelis-pfp.png"
 
+//Resumes
+import EdwinResume from "../assets/Resumes/Edwin_Manuel_Vazquez_Vega_resume 2025.pdf"
+
 //Icons
-import { GithubIcon, LinkedinIcon, Mail } from "lucide-react";
+import { GithubIcon, LinkedinIcon, Mail, FileTextIcon } from "lucide-react";
 
 
 const Directive = () => {
 
-    const MemberCards = ({name, role, img=Nopfp, linkedin, gitHub, mail}) => {
+    const MemberCards = ({name, role, img=Nopfp, linkedin, gitHub, mail, resume}) => {
+        //Replacing the spaces with _ when saving the file
+        const modifyName = name.replace(" ", "_")
         return (
             <div className="flex flex-col items-center pb-10 pt-10 border-3 border-white">
                 {/* Image */}
@@ -49,6 +54,12 @@ const Directive = () => {
                             <Mail color="white"/>                               
                         </a>
                      
+                    }
+
+                    {resume &&
+                        <a href={resume} download={`${modifyName}_resume`} target="_blank">
+                            <FileTextIcon color="white"/>                               
+                        </a>
                     }
                 </div>
 
@@ -107,6 +118,7 @@ const Directive = () => {
                         linkedin="https://www.linkedin.com/in/edwin-vazquez-a8a208279/"
                         gitHub="https://github.com/Revokeez"
                         mail="edwinmvazquez1@gmail.com"
+                        resume={EdwinResume}
                     />
                     <MemberCards
                         name="Nordiel Martinez" 
