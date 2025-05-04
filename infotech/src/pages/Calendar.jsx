@@ -59,8 +59,10 @@ const Calendar = () => {
 
   }
   return (
-    <>
+  <>
     <NavBar />
+
+    {/*Start of Calendar */}
     <div className="p-4 max-w-4xl mx-auto fadeInUp-animation">
       <h2 className="text-3xl font-bold text-center mb-4 text-white">May 2025</h2>
 
@@ -80,6 +82,7 @@ const Calendar = () => {
 
         {/* Actual days */}
         {days.map((day) => (
+
           <div
             key={day}
             className={`p-2 rounded-lg ${activitiesDates.includes(day) ? "bg-green-600" : "bg-gray-700"} text-white hover:bg-blue-500 transition-colors cursor-pointer`}
@@ -94,16 +97,21 @@ const Calendar = () => {
               }
             }}
           >
-              {day}
-            </div>
-          ))}
-        </div>
+            {day}
+          </div>
+
+        ))}
       </div>
-      {isSideBarOpen && (
+    </div>
+    {/* End of Calendar */}
+
+    {/* Sidebar */}
+    {isSideBarOpen && (
       <Sidebar />
-      )}
+    )}
+
     <Footer />
-    </>
+  </>
   );
 };
 
