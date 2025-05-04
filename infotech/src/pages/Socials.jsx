@@ -30,7 +30,7 @@ const Socials = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         className={`flex flex-col items-center p-6 bg-white bg-opacity-10 rounded-xl hover:scale-105 transition transform duration-300 w-50`}
-                        >
+                      >
                         <div className={`${social.color} mb-2`}>{social.icon}</div>
                         <span className="text-xl font-semibold text-black">{social.name}</span>
                     </a>
