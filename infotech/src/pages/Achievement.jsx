@@ -21,7 +21,7 @@ const Achievement = () => {
             <NavBar />
                 <div className="flex justify-center flex-wrap mt-5 gap-5 fadeInUp-animation">
                     <Card title="Primer Lugar - IHack Inter American University Puerto Rico Bayamon"
-                        img={PrimerLugarIHACK2025}/>
+                        img={PrimerLugarIHACK2025} />
                     <Card title="Primer lugar - ISACA IT Bowl Puerto Rico" 
                         img={IsacaPrimerLugar}/>
                     <Card title="Primer lugar - Caribbean Celebration of Women in Computing (CCWIC) and JaneHacks Hackathon UPR - Mayaguez" 
