@@ -1,7 +1,7 @@
 import React from "react";
-import { useState } from "react";
 
 //Components
+import { useState } from "react";
 import NavBar from "../components/Navbar";
 import Footer from "../components/Footer";
 
@@ -9,8 +9,15 @@ import Footer from "../components/Footer";
 import TallerDeCyber from "../assets/Images/Crystal_Taller_Linux101_img1.png";
 import TallerDeNetworking from "../assets/Images/Aurelis_Taller_de_Vlans.png";
 import TallerDeComputerScience from "../assets/Images/Josue_Taller_De_Github_img1.png"
-import TallerDeMobileDevelopment from "../assets/Images/Activities/mobile_development.jpeg"
+import CharlaDeMobileDevelopment from "../assets/Images/Activities/mobile_development.jpeg"
 import PrimeraReunion from "../assets/Images/Activities/primera_reunion_de_asosacion.jpeg"
+import OrientacionDeDriven from "../assets/Images/Activities/driven_internship_orientation.png"
+import CharlaDeInteligenciaArtificial from "../assets/Images/Activities/artificial_inteligence.png"
+import TourDeHub787 from "../assets/Images/Activities/hub787.png"
+import OrientacionDeOracle from "../assets/Images/Activities/oracle_internship_orientation.png"
+import CharlaDeFundametosDeAuditoriaDeSistemas from "../assets/Images/Activities/isaca.png"
+import TallerDeEvertec from "../assets/Images/Activities/evertec_cyber_defence.png"
+import CharlaDeTerminal34 from "../assets/Images/Activities/terminal34.png"
 
 //Icons
 import { Link } from "lucide-react";
@@ -36,8 +43,8 @@ const Activity = () => {
                         {text}
                     </div>
                     {social && typeof social == "string" &&
-                        <a href={social} target="_blank" className="mt-2">
-                            <Link size={40}/>
+                        <a href={social} target="_blank">
+                            <Link className="mt-4 max-sm:mx-auto" size={40}/>
                         </a>
                     }
    
@@ -79,28 +86,33 @@ const Activity = () => {
                                 text="Cada semestre comenzamos con una reunión donde la directiva se presenta y se discuten las actividades futuras de la Asociación. También realizamos dinámicas para integrar a los nuevos miembros."
                             />
                             <TypeOfActivity
-                                img={TallerDeMobileDevelopment} 
+                                img={CharlaDeMobileDevelopment} 
                                 title="Mobile Development"
                                 text="Un Software Developer de INVID ofreció un taller de desarrollo móvil utilizando React Native. Además, compartió su experiencia trabajando en la industria y en INVID."
                             />
                             <TypeOfActivity 
+                                img={TourDeHub787}
                                 title="Tour de HUB787" 
                                 text="Visitamos el data center HUB787, el único centro de datos certificado en Puerto Rico. Durante el recorrido, aprendimos sobre la entrada de cables submarinos, la nube física de AWS, servidores, el concepto de colocación, IoT y mucho más."
                                 social="https://www.instagram.com/p/DJJwYkCRiKy/?img_index=2&igsh=MWJwaDZvcXVlYmloaw=="
                             />
                             <TypeOfActivity 
+                                img={OrientacionDeOracle}
                                 title="Orientación de Oracle" 
                                 text="Recibimos la visita de Auro Roque de Oracle, quien nos habló sobre el programa de pasantías 'Generación Oracle' y compartió oportunidades de crecimiento profesional."
                             />
-                            <TypeOfActivity 
+                            <TypeOfActivity
+                                img={CharlaDeFundametosDeAuditoriaDeSistemas} 
                                 title="Fundamentos de Auditoría de Sistemas de Información" 
                                 text="Se ofreció una charla introductoria sobre los principios de auditoría de sistemas de información, incluyendo riesgos, controles, y buenas prácticas en entornos tecnológicos."
                             />
                             <TypeOfActivity 
+                                img={TallerDeEvertec}
                                 title="Cyber Defence: Zero to Hero" 
                                 text="Los estudiantes de la Asociación participaron en una experiencia práctica en EVERTEC sobre ciberseguridad, donde simularon ataques y aprendieron técnicas de defensa digital."
                             />
-                            <TypeOfActivity 
+                            <TypeOfActivity
+                                img={CharlaDeTerminal34} 
                                 title="Charla sobre Emprendimiento en Tecnología (Terminal 34)" 
                                 text="Bryan García, fundador de Terminal 34, ofreció una charla inspiradora sobre cómo comenzar tu propia empresa en el campo de la tecnología."
                             />
@@ -117,6 +129,7 @@ const Activity = () => {
                                 text="En este taller, dos miembros de la Asociación enseñaron problemas comunes de entrevistas técnicas utilizando la plataforma LeetCode y ofrecieron consejos para prepararse eficazmente."
                             />
                             <TypeOfActivity 
+                                img={CharlaDeInteligenciaArtificial}
                                 title="Inteligencia Artificial" 
                                 text="El director del Departamento de Ciencia de Computadoras, Jaime Yeckle, ofreció un taller sobre los fundamentos de la inteligencia artificial y su aplicación en la industria."
                             />
@@ -128,7 +141,8 @@ const Activity = () => {
                                 title="Introducción a Reverse Engineering usando GHIDRA" 
                                 text="Se ofreció una introducción práctica al análisis inverso de software utilizando GHIDRA, una herramienta desarrollada por la NSA. Los estudiantes exploraron binarios y aprendieron conceptos básicos de ingeniería inversa."
                             />
-                            <TypeOfActivity 
+                            <TypeOfActivity
+                                img={OrientacionDeDriven} 
                                 title="Charla sobre Ciberseguridad y Oportunidades de Internados" 
                                 text="La compañía DRIVEN, especializada en ciberseguridad, ofreció una charla sobre tendencias actuales del sector y oportunidades de internados disponibles para estudiantes interesados."
                             />
