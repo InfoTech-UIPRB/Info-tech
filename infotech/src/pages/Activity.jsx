@@ -163,19 +163,19 @@ const Activity = () => {
 
                             <TypeOfActivity 
                                 title="Introduction to Github" 
-                                text="We give workshops on Linux and Capture the Flag (CTF) to provide students with hands-on experience in cybersecurity." 
+                                text="Los estudiantes aprendieron a utilizar GitHub para el control de versiones, incluyendo cómo crear repositorios, hacer commits y colaborar en proyectos." 
                                 img={TallerDeGithub}
                                 social="https://www.instagram.com/p/DA7EMo3yDUC/?img_index=1" 
                             />
                             <TypeOfActivity 
                                 title="Linux 101" 
-                                text="We offer workshops on Mobile Applications, GitHub, and more, with additional topics coming soon. This semester, we're also hosting an event called Leet Code 101 for students who want to improve their problem-solving skills and get hands-on experience with coding challenges." 
+                                text="Los estudiantes exploraron diferentes distribuciones de Linux y aprendieron comandos esenciales de la terminal." 
                                 img={TallerDeCyber} 
                                 social="https://www.instagram.com/p/DAbktFXS938/?img_index=1"
                             />
                             <TypeOfActivity 
                                 title="VLANs" 
-                                text="We give workshops on VLANs and, this semester, we will also offer workshops on networking protocols to help students build a strong foundation in networking." 
+                                text="Los estudiantes utilizaron Cisco Packet Tracer para aprender sobre VLANs (Redes de Área Local Virtual), su configuración y cómo ayudan a segmentar redes para mejorar su rendimiento y seguridad." 
                                 img={TallerDeNetworking} 
                                 social="https://www.instagram.com/p/DBjMrVfxUSH/?img_index=1"
                             /> 
