@@ -1,5 +1,5 @@
 // App.jsx
-import { BrowserRouter as RouterProvider, Routes, Route } from "react-router-dom";
+import { HashRouter as RouterProvider, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Directive from "./pages/Directive.jsx";
 import Page404 from "./pages/404Page.jsx";
