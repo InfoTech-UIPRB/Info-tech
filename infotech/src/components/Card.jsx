@@ -2,7 +2,7 @@
 import React from "react";
 const Card = ({text, title, img, alt}) => {
     return (
-        <div className="max-w-sm rounded overflow-hidden shadow-lg border-white border-2">
+        <div className="max-w-sm max-sm:m-3 rounded overflow-hidden shadow-lg border-white border-2">
             <div className="flex justify-center p-5 w-full h-116">
                 <img className="object-cover" src={img} />
             </div>
