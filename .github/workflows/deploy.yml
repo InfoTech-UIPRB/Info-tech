@@ -1,0 +1,33 @@
+on: # This is a Event.
+    push:
+        branches:
+            - gh-pages
+jobs: # A job is a set of steos that are executed in a specified enviroment. In our case is Ubuntu
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22.15'
+
+      - name: Install Dependencies
+        run: |
+          cd infotech
+          npm install
+
+      - name: Build Infotech Proyect
+        run: |
+          cd infotech
+          npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: infotech/dist
+          cname: infotech-uiprb.com  # Adding cname file
