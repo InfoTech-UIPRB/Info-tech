@@ -1,8 +1,8 @@
 import React from "react";
 import { ImagesPath } from "../components/ImagesPath";
-import Carousel from "../components/Carousel";
-import NavBar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Carousel from "../components/Carousel.jsx";
+import NavBar from "../components/NavBar.jsx";
+import Footer from "../components/Footer.jsx";
 
 const Home = () => {
   const BlurryOverlay = () => {

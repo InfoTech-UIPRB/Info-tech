@@ -1,7 +1,7 @@
 import React from "react";
 
 //Components
-import NavBar from "../components/Navbar";
+import NavBar from "../components/NavBar.jsx";
 import Footer from "../components/Footer";
 
 //Hooks

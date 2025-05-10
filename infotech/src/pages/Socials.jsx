@@ -1,6 +1,6 @@
 import React from "react";
 import { InstagramIcon, LinkedinIcon, GithubIcon } from "lucide-react";
-import NavBar from "../components/Navbar";
+import NavBar from "../components/NavBar.jsx";
 import Footer from "../components/Footer";
 
 const Socials = () => {

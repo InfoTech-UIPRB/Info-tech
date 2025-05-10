@@ -2,7 +2,7 @@ import React from "react";
 
 //Components
 import Card from "../components/Card.jsx";
-import NavBar from "../components/Navbar.jsx";
+import NavBar from "../components/NavBar.jsx";
 import Footer from "../components/Footer.jsx";
 
 //Images

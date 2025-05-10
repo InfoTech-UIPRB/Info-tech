@@ -1,8 +1,8 @@
 import React from "react";
 
 //Components
-import NavBar from "../components/Navbar";
-import Footer from "../components/Footer";
+import NavBar from "../components/NavBar.jsx";
+import Footer from "../components/Footer.jsx";
 
 //Images
 import President from "../assets/PFP/chelimar-pfp.png"
