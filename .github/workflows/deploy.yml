@@ -1,3 +1,4 @@
+name: Deploy Infotech Website
 on: # This is a Event. A push is a event.
     push:
         branches:
@@ -20,7 +21,7 @@ jobs: # A job is a set of steos that are executed in a specified enviroment. In 
           cd infotech
           npm install
 
-      - name: Build Infotech Proyect #Builds the optimized, production ready version of the Reac App(Infotech Project)
+      - name: Build Infotech Website #Builds the optimized, production ready version of the Reac App(Infotech Project)
         run: |
           cd infotech
           npm run build
