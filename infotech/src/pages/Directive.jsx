@@ -103,6 +103,7 @@ const Directive = () => {
                         name="Jeremmy Leiva"
                         role="Vocal"
                         img={Vocal01}
+                        mail="jleiva2084@interbayamon.edu"
                         linkedin="https://www.linkedin.com/in/jeremmy-leiva-aguilar-jem/"
                     />
                     <MemberCards 
