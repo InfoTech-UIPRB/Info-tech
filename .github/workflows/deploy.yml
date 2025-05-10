@@ -1,4 +1,4 @@
-on: # This is a Event.
+on: # This is a Event. A push is a event.
     push:
         branches:
             - gh-pages
