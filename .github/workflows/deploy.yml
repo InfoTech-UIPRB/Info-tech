@@ -3,6 +3,8 @@ on: # This is a Event. A push is a event.
     push:
         branches:
             - New_Infotech
+permissions: 
+  contents: write # Allowing GITHUB_TOKEN to be access
 jobs: # A job is a set of steos that are executed in a specified enviroment. In our case is Ubuntu
   build:
     runs-on: ubuntu-latest
