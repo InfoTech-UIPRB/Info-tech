@@ -1,9 +1,11 @@
 import React from "react";
 
 //Components
-import { useState } from "react";
 import NavBar from "../components/Navbar";
 import Footer from "../components/Footer";
+
+//Hooks
+import { useState } from "react";
 import useWindowDimensions from "../hooks/useWindowsDimensions";
 
 //Images
