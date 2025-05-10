@@ -37,15 +37,15 @@ const Activity = () => {
             <div className={`flex ${left ? "flex-row-reverse" : "flex-row"} max-sm:flex-col max-sm:text-center gap-6 mx-7 mb-18`}>
                 {/* Image */}
                 <div className="flex-shrink-0 max-sm:mx-auto">
-                    <img className="lg:h-120 lg:w-140 md:h-80 md:w-90 h-48 w-52 object-cover rounded border border-yellow-300" src={img} alt={alt || "Activity Image"} />
+                    <img className="xl:h-120 xl:w-140 lg:h-100 lg:w-115 md:h-70 md:w-80 h-48 w-52 object-cover rounded border border-yellow-300" src={img} alt={alt || "Activity Image"} />
                 </div>
     
                 {/* Text Section */}
                 <div className="text-white flex-1/2">
-                    <div className="text-yellow-300 font-bold lg:text-4xl md:text-3xl text-xl mb-2">
+                    <div className="text-yellow-300 font-bold xl:text-4xl lg:text-3xl md:text-2xl text-xl mb-2">
                         {title}
                     </div>
-                    <div className="lg:text-3xl md:text-xl text-sm font-mono ">
+                    <div className="xl:text-3xl lg:text-2xl md:text-xl text-sm font-mono ">
                         {text}
                     </div>
                     {social && typeof social == "string" &&
@@ -62,7 +62,7 @@ const Activity = () => {
     return (
         <>
             <NavBar />
-                <div className="p-6 fadeInUp-animation ">
+                <div className="p-6 xl:mx-30 lg:mx-10 md:mx-5 sm:mx-3 fadeInUp-animation">
                   {/* Dropdown */}
                   <div className="md:mb-4 mb-10 md:ml-8 max-sm:flex max-sm:justify-center">
                     <select
