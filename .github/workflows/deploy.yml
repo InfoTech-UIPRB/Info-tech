@@ -2,12 +2,12 @@ name: Deploy Infotech Website
 on: # This is a Event. A push is a event.
     push:
         branches:
-            - gh-pages
+            - New_Infotech
 jobs: # A job is a set of steos that are executed in a specified enviroment. In our case is Ubuntu
   build:
     runs-on: ubuntu-latest
 
-    steps:
+    steps: # Every step runs on its own isolated shell session
       - name: Checkout code # Clones the repository into the VM(runner) where the workflow is running. Without this step the runner will not have access the the proyect code
         uses: actions/checkout@v3
 
