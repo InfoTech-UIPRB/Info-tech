@@ -10,7 +10,7 @@ import PrimerLugarIHACK2025 from "../assets/Images/Primer_Lugar_IHACK_2025.png"
 import PrimerLugarIHACK2024 from  "../assets/Images/IHack_First_Page.png";
 import PrimerLugarUprBayamon from "../assets/Images/First_Place_Advance_UPR_.png"
 import SegundoLugarUprBayamon from "../assets/Images/Second_Place_Principante_UPR.png"
-import IsacaPrimerLugar from "../assets/Images/Isaca_img.png"
+import IsacaPrimerLugar from "../assets/Images/Isaca_Img.png"
 import JaneHacksPrimerLugar from "../assets/Images/First_Place_JaneHacks.png"
 import BancoPopularPrimerLugar from "../assets/Images/First_Place_Copilot_Studio_Hackathon.png"
 import BloombergPrimerLugarUprRioPiedras from "../assets/Images/Tercer_Lugar_Bloomberg_UPR_Rio_Piedras.png"
