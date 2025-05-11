@@ -1,5 +1,5 @@
 import React from "react";
-import { InstagramIcon, LinkedinIcon, GithubIcon } from "lucide-react";
+import { InstagramIcon, GithubIcon } from "lucide-react";
 import NavBar from "../components/NavBar.jsx";
 import Footer from "../components/Footer";
 
