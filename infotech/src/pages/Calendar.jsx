@@ -63,7 +63,7 @@ const Calendar = () => {
     <NavBar />
 
     {/*Start of Calendar */}
-    <div className="p-4 max-w-4xl mx-auto fadeInUp-animation">
+    <div className="p-4 max-w-4xl mx-auto max-h-screen fadeInUp-animation">
       <h2 className="text-3xl font-bold text-center mb-4 text-white">May 2025</h2>
 
       {/* Days of the week */}
