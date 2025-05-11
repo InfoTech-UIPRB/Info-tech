@@ -88,7 +88,6 @@ const Directive = () => {
                         role="President"
                         img={President}
                         linkedin="https://www.linkedin.com/in/chelimar-morales/"
-                        mail=""
                     />
                     <MemberCards
                         name="Carlos Negron"
