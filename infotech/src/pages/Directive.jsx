@@ -15,6 +15,7 @@ import Vocal02 from "../assets/PFP/aurelis-pfp.png"
 
 //Resumes
 import EdwinResume from "../assets/Resumes/Edwin_Manuel_Vazquez_Vega_resume 2025.pdf"
+import AurelisResume from "../assets/Resumes/Aurelis_Otero.pdf"
 
 //Icons
 import { GithubIcon, LinkedinIcon, Mail, FileTextIcon } from "lucide-react";
@@ -110,6 +111,7 @@ const Directive = () => {
                         role="Vocal"
                         img={Vocal02}
                         linkedin="https://www.linkedin.com/in/aurelis-otero-02348428a/"
+                        resume={AurelisResume}
                     />
                     <MemberCards 
                         name="Edwin Vazquez"
