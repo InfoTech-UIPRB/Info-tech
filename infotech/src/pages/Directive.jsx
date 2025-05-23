@@ -70,7 +70,7 @@ const Directive = () => {
     return (
         <>
             <NavBar />
-            <div className="flex justify-center max-h-screen fadeInUp-animation">
+            <div className="flex justify-center fadeInUp-animation">
                 <div
                     className="md:w-full
                                sm:w-110
