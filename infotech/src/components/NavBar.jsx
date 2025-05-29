@@ -31,6 +31,7 @@ const NavBar = () => {
         <div className="hidden md:flex space-x-8">
           {navigation.map((item) => (
             <Link
+              key={`idx-${item.href}`}
               to = {item.href}
               className={`${currentPage.pathname == item.href ? "text-yellow-300" : "text-white"} hover:text-yellow-300 transition font-medium`}
             >
