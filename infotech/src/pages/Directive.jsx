@@ -7,7 +7,6 @@ import Footer from "../components/Footer.jsx";
 //Images
 import President from "../assets/PFP/chelimar-pfp.png"
 import Nopfp from "../assets/PFP/nopfp.jpg"
-import Secretaria from "../assets/PFP/angelie-pfp.png"
 import Vocal01 from "../assets/PFP/jeremy-pfp.jpg"
 import Vocal04 from "../assets/PFP/nordiel-pfp.png"
 import Vocal03 from "../assets/PFP/edwin-pfp.jpg"
@@ -20,17 +19,99 @@ import AurelisResume from "../assets/Resumes/Aurelis_Otero.pdf"
 //Icons
 import { GithubIcon, LinkedinIcon, Mail, FileTextIcon } from "lucide-react";
 
+class Person{
+constructor(name, role, img, linkedin, gitHub, mail, resume) {
+    this.nameInternal = name;
+    this.roleInternal = role;
+    this.imgInternal = img;
+    this.linkedinInternal = linkedin;
+    this.gitHubInternal = gitHub;
+    this.mailInternal = mail;
+    this.resumeInternal = resume;
+  }
+
+  get getName() {
+    return this.nameInternal;
+  }
+
+  set setName(name) {
+    this.nameInternal = name;
+  }
+
+  get getRole() {
+    return this.roleInternal;
+  }
+
+  set setRole(role) {
+    this.roleInternal = role;
+  }
+
+  get getImg() {
+    return this.imgInternal;
+  }
+
+  set setImg(img) {
+    this.imgInternal = img;
+  }
+
+  get getLinkedin() {
+    return this.linkedinInternal;
+  }
+
+  set setLinkedin(linkedin) {
+    this.linkedinInternal = linkedin;
+  }
+
+  get getGitHub() {
+    return this.gitHubInternal;
+  }
+
+  set setGitHub(gitHub) {
+    this.gitHubInternal = gitHub;
+  }
+
+  get getMail() {
+    return this.mailInternal;
+  }
+
+  set setMail(mail) {
+    this.mailInternal = mail;
+  }
+
+  get getResume() {
+    return this.resumeInternal;
+  }
+
+  set setResume(resume) {
+    this.resumeInternal = resume;
+  }
+
+}
 
 const Directive = () => {
 
-    const MemberCards = ({name, role, img=Nopfp, linkedin, gitHub, mail, resume}) => {
+    const directives = [
+        new Person("Chelimar Morales", "President", President, "https://www.linkedin.com/in/chelimar-morales/", null, null, null),
+        new Person("Carlos Negron", "Vice President", null, null, null, "cnegron6786@interbayamon.edu", null),
+        new Person("Josue Vazquez", "Tesorero", null, null, null, null, null),
+        new Person("Jeremmy Leiva", "Vocal", Vocal01, "https://www.linkedin.com/in/jeremmy-leiva-aguilar-jem/", null, "jleiva2084@interbayamon.edu", null),
+        new Person("Aurelis Otero", "Vocal", Vocal02, "https://www.linkedin.com/in/aurelis-otero-02348428a/", null, null, AurelisResume),
+        new Person("Edwin Vazquez", "Vocal", Vocal03, "https://www.linkedin.com/in/edwin-vazquez-a8a208279/", "https://github.com/Revokeez", "edwinmvazquez1@gmail.com", EdwinResume),
+        new Person("Nordiel Martinez", "Vocal", Vocal04, "https://www.linkedin.com/in/nordielmartinez/", "https://github.com/nordiel", null, null),
+        new Person("Crystal Mercado", "Vocal", null, "https://www.linkedin.com/in/crystal-mercado/", null, "cmercado7908@interbayamon.edu", null),
+        new Person("Hacniel Cardona", "Mentor", null, null, null, null, null),
+        new Person("Jose Rodriguez", "Director", null, null, null, null, null)
+    ];
+
+    const MemberCards = ({name, role, img, linkedin, gitHub, mail, resume}) => {
+        if(img == null) img = Nopfp
         //Replacing the spaces with _ when saving the file
-        const modifyName = name.replace(" ", "_")
+        const resumeName = name.replace(" ", "_")
         return (
             <div className="flex flex-col items-center pb-10 pt-10 border-3 border-white">
                 {/* Image */}
                 <img className="w-35 h-35 object-cover rounded-full shadow-lg" src={img}
-                     alt="Image of Directive Member" />
+                     alt={`Image of ${role} ${name}`} />
                 {/* Name */}
                 <h5 className="mb-1 text-xl font-medium text-white text-center">{name}</h5>
                 {/* Role */}
@@ -58,7 +139,7 @@ const Directive = () => {
                     }
 
                     {resume &&
-                        <a href={resume} download={`${modifyName}_resume`} target="_blank">
+                        <a href={resume} download={`${resumeName}_resume`} target="_blank">
                             <FileTextIcon color="white"/>                               
                         </a>
                     }
@@ -83,66 +164,18 @@ const Directive = () => {
                                xl:grid-cols-5 
                                gap-6 
                                p-4">
-
-                    <MemberCards 
-                        name="Chelimar Morales"
-                        role="President"
-                        img={President}
-                        linkedin="https://www.linkedin.com/in/chelimar-morales/"
-                    />
-                    <MemberCards
-                        name="Carlos Negron"
-                        role="Vice President" 
-                        mail="cnegron6786@interbayamon.edu"
-                    />
-                    <MemberCards 
-                        name="Josue Vazquez" 
-                        role="Tesorero" 
-                    />
-                    <MemberCards 
-                        name="Jeremmy Leiva"
-                        role="Vocal"
-                        img={Vocal01}
-                        mail="jleiva2084@interbayamon.edu"
-                        linkedin="https://www.linkedin.com/in/jeremmy-leiva-aguilar-jem/"
-                    />
-                    <MemberCards 
-                        name="Aurelis Otero" 
-                        role="Vocal"
-                        img={Vocal02}
-                        linkedin="https://www.linkedin.com/in/aurelis-otero-02348428a/"
-                        resume={AurelisResume}
-                    />
-                    <MemberCards 
-                        name="Edwin Vazquez"
-                        role="Vocal"
-                        img={Vocal03}
-                        linkedin="https://www.linkedin.com/in/edwin-vazquez-a8a208279/"
-                        gitHub="https://github.com/Revokeez"
-                        mail="edwinmvazquez1@gmail.com"
-                        resume={EdwinResume}
-                    />
-                    <MemberCards
-                        name="Nordiel Martinez" 
-                        role="Vocal" 
-                        img={Vocal04}
-                        linkedin="https://www.linkedin.com/in/nordielmartinez/"
-                        gitHub="https://github.com/nordiel"
-                    />
-                    <MemberCards 
-                        name="Crystal Mercado"
-                        role="Vocal"
-                        linkedin="https://www.linkedin.com/in/crystal-mercado/"
-                        mail="cmercado7908@interbayamon.edu"
+                    {directives.map((element) => (
+                        <MemberCards 
+                            key={element.getName}
+                            name={element.getName}
+                            role={element.getRole}
+                            img={element.getImg}
+                            linkedin={element.getLinkedin}
+                            gitHub={element.getGitHub}
+                            mail={element.getMail}
+                            resume={element.getResume}
                         />
-                    <MemberCards 
-                        name="Hacniel Cardona" 
-                        role="Mentor" 
-                    />
-                    <MemberCards 
-                        name="Jose Rodriguez" 
-                        role="Director" 
-                    />
+                    ))}
                 </div>
             </div>
             <Footer />
@@ -151,4 +184,4 @@ const Directive = () => {
     )
 }
 
-export default Directive
+export default Directive;
