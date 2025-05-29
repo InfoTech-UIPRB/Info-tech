@@ -42,10 +42,25 @@ const Calendar = () => {
     setIsSidebarOpen(!isSideBarOpen)
   }
 
+  const dateInfo = new Date()
+  const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  const daysInMonth = 31;
-  const startingDay = 4; //In what day does the month start. For example may starts in Thrusday, soo that means Sun, Mon, Tues, Weds will be blanck.
 
+  //Getting current Month Index
+  const currentMonthIndex = dateInfo.getMonth();
+
+  //Getting current Month String
+  const currentMonth = month[currentMonthIndex];
+
+  //Getting current Year. Number not a string
+  const currentYear = dateInfo.getFullYear();
+
+  //Getting the last day of the previous month. Thats why we are adding a plus one.
+  const daysInMonth = new Date(currentYear, currentMonthIndex + 1, 0).getDate();
+  //In what day does the month start. For example may starts in Thrusday, soo that means Sun, Mon, Tues, Weds will be blanck.
+  const startingDay = new Date(currentYear, currentMonthIndex, 1).getDay();
+
+  //I what day does the month start. If the day of the month start at Wed that means that Sun, Mon and Tue will be blank
   const blankDays = Array(startingDay).fill(null);
   const days = Array.from({ length: daysInMonth }, (_, i) => i + 1);
 
@@ -63,8 +78,8 @@ const Calendar = () => {
     <NavBar />
 
     {/*Start of Calendar */}
-    <div className="p-4 max-w-4xl mx-auto max-h-screen fadeInUp-animation">
-      <h2 className="text-3xl font-bold text-center mb-4 text-white">May 2025</h2>
+    <div className="p-4 max-w-full mx-auto fadeInUp-animation">
+      <h2 className="text-3xl font-bold text-center mb-4 text-white">{currentMonth} {currentYear}</h2>
 
       {/* Days of the week */}
       <div className="grid grid-cols-7 gap-2 text-center text-gray-300 mb-2">
@@ -75,6 +90,7 @@ const Calendar = () => {
 
       {/* Calendar Days */}
       <div className="grid grid-cols-7 gap-2">
+
         {/* Empty starting days */}
         {blankDays.map((_, idx) => (
           <div key={`blank-${idx}`} />
@@ -85,7 +101,7 @@ const Calendar = () => {
 
           <div
             key={day}
-            className={`p-2 rounded-lg ${activitiesDates.includes(day) ? "bg-green-600" : "bg-gray-700"} text-white hover:bg-blue-500 transition-colors cursor-pointer`}
+            className={`p-2 rounded-lg ${activitiesDates.includes(day) ? "bg-green-600" : "bg-gray-700"} text-white hover:bg-blue-500 transition-colors cursor-pointer xl:h-50 lg:h-40 md:h-30 sm:h-20 h-15`}
             onClick={() => {
               if (activitiesDates.includes(day)) {
                 setActivityInformation({
