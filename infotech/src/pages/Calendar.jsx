@@ -79,10 +79,10 @@ const Calendar = () => {
 
     {/*Start of Calendar */}
     <div className="p-4 max-w-full mx-auto fadeInUp-animation">
-      <h2 className="text-3xl font-bold text-center mb-4 text-white">{currentMonth} {currentYear}</h2>
+      <h2 className="xl:text-5xl lg:text-4xl md:text-3xl text-2xl font-bold text-center mb-4 text-white">{currentMonth} {currentYear}</h2>
 
       {/* Days of the week */}
-      <div className="grid grid-cols-7 gap-2 text-center text-gray-300 mb-2">
+      <div className="grid grid-cols-7 gap-2 text-center xl:text-3xl lg:text-2xl md:text-xl text-gray-300 mb-2">
         {daysOfWeek.map((day) => (
           <div key={day} className="font-semibold">{day}</div>
         ))}
