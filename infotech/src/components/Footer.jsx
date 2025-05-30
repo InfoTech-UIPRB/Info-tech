@@ -3,7 +3,7 @@ import InfotechLogo from "../assets/Images/png_logo_infotech.png"
 
 const Footer = () => {
     return (
-        <footer className="text-gray-300 py-10">
+        <footer className="text-gray-300 py-10 relative top-auto w-full bottom-0 left-0 right-0">
           <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-wrap justify-between">
               {/* <!-- Logo and Description --> */}
