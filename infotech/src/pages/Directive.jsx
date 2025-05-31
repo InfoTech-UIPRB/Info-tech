@@ -4,6 +4,9 @@ import React from "react";
 import NavBar from "../components/NavBar.jsx";
 import Footer from "../components/Footer.jsx";
 
+//Classes
+import { Person } from "../Classes/Person.js";
+
 //Images
 import President from "../assets/PFP/chelimar-pfp.png"
 import Nopfp from "../assets/PFP/nopfp.jpg"
@@ -18,75 +21,6 @@ import AurelisResume from "../assets/Resumes/Aurelis_Otero.pdf"
 
 //Icons
 import { GithubIcon, LinkedinIcon, Mail, FileTextIcon } from "lucide-react";
-
-class Person{
-constructor(name, role, img, linkedin, gitHub, mail, resume) {
-    this.nameInternal = name;
-    this.roleInternal = role;
-    this.imgInternal = img;
-    this.linkedinInternal = linkedin;
-    this.gitHubInternal = gitHub;
-    this.mailInternal = mail;
-    this.resumeInternal = resume;
-  }
-
-  get getName() {
-    return this.nameInternal;
-  }
-
-  set setName(name) {
-    this.nameInternal = name;
-  }
-
-  get getRole() {
-    return this.roleInternal;
-  }
-
-  set setRole(role) {
-    this.roleInternal = role;
-  }
-
-  get getImg() {
-    return this.imgInternal;
-  }
-
-  set setImg(img) {
-    this.imgInternal = img;
-  }
-
-  get getLinkedin() {
-    return this.linkedinInternal;
-  }
-
-  set setLinkedin(linkedin) {
-    this.linkedinInternal = linkedin;
-  }
-
-  get getGitHub() {
-    return this.gitHubInternal;
-  }
-
-  set setGitHub(gitHub) {
-    this.gitHubInternal = gitHub;
-  }
-
-  get getMail() {
-    return this.mailInternal;
-  }
-
-  set setMail(mail) {
-    this.mailInternal = mail;
-  }
-
-  get getResume() {
-    return this.resumeInternal;
-  }
-
-  set setResume(resume) {
-    this.resumeInternal = resume;
-  }
-
-}
 
 const Directive = () => {
 
@@ -104,7 +38,7 @@ const Directive = () => {
     ];
 
     const MemberCards = ({name, role, img, linkedin, gitHub, mail, resume}) => {
-        if(img == null) img = Nopfp
+        if(img == null) img = Nopfp;
         //Replacing the spaces with _ when saving the file
         const resumeName = name.replace(" ", "_")
         return (
@@ -151,7 +85,7 @@ const Directive = () => {
     return (
         <>
             <NavBar />
-              <div className="flex justify-center fadeInUp-animation">
+              <div className="flex justify-center fadeInUp-animation min-h-screen">
                   <div
                       className="md:w-full
                                 sm:w-110
