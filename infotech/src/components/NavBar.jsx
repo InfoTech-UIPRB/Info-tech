@@ -45,7 +45,7 @@ const NavBar = () => {
           {/* This is for Joining the assosiation */}
           <div className="rounded-sm bg-yellow-300 px-2 py-1">
             <Link
-              to="https://infotech.fillout.com/t/dtBhkArfxLus"
+              to="https://forms.office.com/pages/responsepage.aspx?id=tdtd3h4kJ02LXANDIVkPcTsONUzzkThHno0oM-P8mM9UNUZBTzFNMEZCSjZCOEgyQzVHSDNCTFZQNC4u&route=shorturl"
               target="_blank"
               className="text-black hover:text-white transition font-medium"
             >
@@ -85,7 +85,7 @@ const NavBar = () => {
             {/* This is for Joining the assosiation */}
             <div className="rounded-sm bg-yellow-300 px-2 py-1">
               <Link
-                to="https://infotech.fillout.com/t/dtBhkArfxLus"
+                to="https://forms.office.com/pages/responsepage.aspx?id=tdtd3h4kJ02LXANDIVkPcTsONUzzkThHno0oM-P8mM9UNUZBTzFNMEZCSjZCOEgyQzVHSDNCTFZQNC4u&route=shorturl"
                 target="_blank"
                 className="text-black hover:text-white transition font-medium"
               >
