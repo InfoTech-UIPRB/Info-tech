@@ -15,6 +15,7 @@ import Vocal04 from "../assets/PFP/axel-pfp.jpeg";
 import Vocal05 from "../assets/PFP/yaniel-pfp.jpeg";
 import Vocal06 from "../assets/PFP/luis-pfp.jpeg";
 import Vocal07 from "../assets/PFP/diego-pfp.jpeg";
+import Vocal08 from "../assets/PFP/sophia-pfp.jpeg";
 
 import Mentor from "../assets/PFP/hacniel-pfp.jpeg";
 import Director from "../assets/PFP/jose-pfp.jpeg";
@@ -26,6 +27,7 @@ import NordielResume from "../assets/Resumes/Nordiel E. Martinez Cardona- Resume
 import YanielResume from "../assets/Resumes/Resume Yaniel.pdf";
 import LuisResume from "../assets/Resumes/Luis Diego Martínez Ortiz Resume 2025.pdf";
 import DiegoResume from "../assets/Resumes/Resume Diego D. Aguayo Rivera - UPDATED.pdf";
+import SophiaResume from "../assets/Resumes/Sophia Peluyera Consuegra Resume.pdf";
 
 //Icons
 import { GithubIcon, LinkedinIcon, Mail, FileTextIcon } from "lucide-react";
@@ -180,6 +182,15 @@ const Board = () => {
       null,
       "axelalgarin405@gmail.com",
       null
+    ),
+    new Person(
+      "Sophia Peluyera",
+      "Vocal",
+      Vocal08,
+      "https://www.linkedin.com/in/sophia-peluyera/",
+      null,
+      "speluyera5481@interbayamon.edu",
+      SophiaResume
     ),
 
     new Person(
