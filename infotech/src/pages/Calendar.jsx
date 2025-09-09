@@ -1,49 +1,63 @@
-import React, { useState } from 'react';
-import NavBar from '../components/NavBar.jsx';
-import Footer from '../components/Footer';
+import React, { useState } from "react";
+import NavBar from "../components/NavBar.jsx";
+import Footer from "../components/Footer";
 
 const Calendar = () => {
   const [isSideBarOpen, setIsSidebarOpen] = useState(false);
   const [activityInformation, setActivityInformation] = useState([
-    { title: '', description: '', room: '' }
+    { title: "", description: "", time: "", room: "" },
   ]);
 
   const Sidebar = () => {
     return (
       <div
-      className="fixed inset-0 flex h-full w-full bg-black/40"
-      onClick={toggleSideBar}
-    >
-      {/* Sidebar */}
-      <div
-        className="relative bg-white/80 backdrop-blur-md w-64 max-w-xs h-full p-4 shadow-lg"
-        onClick={(e) => e.stopPropagation()} // prevent closing when clicking inside sidebar
+        className="fixed inset-0 flex h-full w-full bg-black/40"
+        onClick={toggleSideBar}
       >
-        <div className="flex justify-between items-center mb-6">
-          <h2 className="text-lg font-bold">Information of Activity</h2>
-          <button
-            onClick={toggleSideBar}
-            className="text-gray-500 hover:text-gray-800"
-          >
-            Close
-          </button>
-        </div>
+        {/* Sidebar */}
+        <div
+          className="relative bg-white/80 backdrop-blur-md w-64 max-w-xs h-full p-4 shadow-lg"
+          onClick={(e) => e.stopPropagation()} // prevent closing when clicking inside sidebar
+        >
+          <div className="flex justify-between items-center mb-6">
+            <h2 className="text-lg font-bold">Information of Activity</h2>
+            <button
+              onClick={toggleSideBar}
+              className="text-gray-500 hover:text-gray-800"
+            >
+              Close
+            </button>
+          </div>
           <ul className="space-y-4">
-              <li>Title: {activityInformation.title}</li>
-              <li>Room: {activityInformation.room}</li>
-              <li>Description: {activityInformation.description}</li>
+            <li>Title: {activityInformation.title}</li>
+            <li>Time: {activityInformation.time}</li>
+            <li>Room: {activityInformation.room}</li>
+            <li>Description: {activityInformation.description}</li>
           </ul>
+        </div>
       </div>
-    </div>
-    )
-  }
-  
-  const toggleSideBar = () =>{
-    setIsSidebarOpen(!isSideBarOpen)
-  }
+    );
+  };
 
-  const dateInfo = new Date()
-  const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  const toggleSideBar = () => {
+    setIsSidebarOpen(!isSideBarOpen);
+  };
+
+  const dateInfo = new Date();
+  const month = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
   const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
   //Getting current Month Index
@@ -66,68 +80,88 @@ const Calendar = () => {
 
   //Days that have activities
   //Example: 20
-  const activitiesDates = [];
+  const activitiesDates = [16, 18, 30];
 
   //When the day is in the array(activitiesDates) then we will get the information of the activities
   //Example: 20: {title: 'Linux101', room: 'F201', description: 'I use Arch by the way'},
   const allActivityInformation = {
-
-  }
+    16: {
+      title: "Reunión de Iniciación de Infotech 🎉",
+      time: "5:00pm - 6:15pm",
+      room: "Salón de Usos Multiples (SUM)",
+      description:
+        "¡Esta es tu primera reunión de Iniciación de Info-Tech! ✨\n\n Únete a nosotros para conocer a la comunidad, 📅 explorar el calendario de actividades 🚀 y descubrir todo lo que hemos planeado para este año.",
+    },
+    18: {
+      title: "Taller de Virtualización 💻",
+      time: "4:00pm - 5:15pm",
+      room: "G-240",
+      description: "",
+    },
+    30: {
+      title: "Linux 101 👾",
+      time: "5:00pm - 6:15pm",
+      room: "G-240",
+      description: "",
+    },
+  };
   return (
-  <>
-    <NavBar />
+    <>
+      <NavBar />
 
-    {/*Start of Calendar */}
-    <div className="p-4 max-w-full mx-auto fadeInUp-animation">
-      <h2 className="xl:text-5xl lg:text-4xl md:text-3xl text-2xl font-bold text-center mb-4 text-white">{currentMonth} {currentYear}</h2>
+      {/*Start of Calendar */}
+      <div className="p-4 max-w-full mx-auto fadeInUp-animation">
+        <h2 className="xl:text-5xl lg:text-4xl md:text-3xl text-2xl font-bold text-center mb-4 text-white">
+          {currentMonth} {currentYear}
+        </h2>
 
-      {/* Days of the week */}
-      <div className="grid grid-cols-7 gap-2 text-center xl:text-3xl lg:text-2xl md:text-xl text-gray-300 mb-2">
-        {daysOfWeek.map((day) => (
-          <div key={day} className="font-semibold">{day}</div>
-        ))}
+        {/* Days of the week */}
+        <div className="grid grid-cols-7 gap-2 text-center xl:text-3xl lg:text-2xl md:text-xl text-gray-300 mb-2">
+          {daysOfWeek.map((day) => (
+            <div key={day} className="font-semibold">
+              {day}
+            </div>
+          ))}
+        </div>
+
+        {/* Calendar Days */}
+        <div className="grid grid-cols-7 gap-2">
+          {/* Empty starting days */}
+          {blankDays.map((_, idx) => (
+            <div key={`blank-${idx}`} />
+          ))}
+
+          {/* Actual days */}
+          {days.map((day) => (
+            <div
+              key={day}
+              className={`p-2 rounded-lg ${
+                activitiesDates.includes(day) ? "bg-green-600" : "bg-gray-700"
+              } text-white hover:bg-blue-500 transition-colors cursor-pointer xl:h-50 lg:h-40 md:h-30 sm:h-20 h-15`}
+              onClick={() => {
+                if (activitiesDates.includes(day)) {
+                  setActivityInformation({
+                    title: allActivityInformation[day].title,
+                    time: allActivityInformation[day].time,
+                    description: allActivityInformation[day].description,
+                    room: allActivityInformation[day].room,
+                  });
+                  toggleSideBar();
+                }
+              }}
+            >
+              {day}
+            </div>
+          ))}
+        </div>
       </div>
+      {/* End of Calendar */}
 
-      {/* Calendar Days */}
-      <div className="grid grid-cols-7 gap-2">
+      {/* Sidebar */}
+      {isSideBarOpen && <Sidebar />}
 
-        {/* Empty starting days */}
-        {blankDays.map((_, idx) => (
-          <div key={`blank-${idx}`} />
-        ))}
-
-        {/* Actual days */}
-        {days.map((day) => (
-
-          <div
-            key={day}
-            className={`p-2 rounded-lg ${activitiesDates.includes(day) ? "bg-green-600" : "bg-gray-700"} text-white hover:bg-blue-500 transition-colors cursor-pointer xl:h-50 lg:h-40 md:h-30 sm:h-20 h-15`}
-            onClick={() => {
-              if (activitiesDates.includes(day)) {
-                setActivityInformation({
-                  title: allActivityInformation[day].title,
-                  description: allActivityInformation[day].description,
-                  room: allActivityInformation[day].room,
-                });
-                toggleSideBar();
-              }
-            }}
-          >
-            {day}
-          </div>
-
-        ))}
-      </div>
-    </div>
-    {/* End of Calendar */}
-
-    {/* Sidebar */}
-    {isSideBarOpen && (
-      <Sidebar />
-    )}
-
-    <Footer />
-  </>
+      <Footer />
+    </>
   );
 };
 
