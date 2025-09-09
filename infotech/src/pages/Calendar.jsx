@@ -99,7 +99,7 @@ const Calendar = () => {
       description: "",
     },
     30: {
-      title: "Linux 101 👾",
+      title: "Taller de Linux 101 👾",
       time: "5:00pm - 6:15pm",
       room: "G-240",
       description: "",
