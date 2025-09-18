@@ -92,18 +92,21 @@ const Calendar = () => {
       description:
         "¡Esta es tu primera reunión de Iniciación de Info-Tech! ✨\n\n Únete a nosotros para conocer a la comunidad, 📅 explorar el calendario de actividades 🚀 y descubrir todo lo que hemos planeado para este año.",
     },
-    // : {
-    //   title: "Taller de Virtualización 💻",
-    //   time: "4:00pm - 5:15pm",
-    //   room: "G-240",
-    //   description: "",
-    // },
     30: {
-      title: "Taller de Linux 101 👾",
-      time: "5:00pm - 6:15pm",
+      title: "Taller de Virtualización 💻",
+      time: "4:00pm - 5:15pm",
       room: "G-240",
-      description: "",
+      description:
+        "💻 Este taller está enfocado en el mundo de la virtualización y las máquinas virtuales (VMs). 🎯 Los participantes aprenderán qué es la virtualización, cómo funciona y cuáles son sus beneficios en el ámbito académico y profesional. 🚀",
     },
+
+    // Octubre
+    // 2: {
+    //   title: "Taller de Linux 101 👾",
+    //   time: "5:00pm - 6:15pm",
+    //   room: "G-240",
+    //   description: "🐧 Linux 101 es un taller introductorio diseñado para quienes desean dar sus primeros pasos en el sistema operativo Linux. 📚 Durante la sesión, los participantes conocerán los conceptos básicos, los principales comandos del terminal, la estructura de archivos y las aplicaciones más comunes. 💡",
+    // },
   };
   return (
     <>
