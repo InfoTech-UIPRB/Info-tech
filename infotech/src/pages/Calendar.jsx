@@ -80,7 +80,7 @@ const Calendar = () => {
 
   //Days that have activities
   //Example: 20
-  const activitiesDates = [16, 18, 30];
+  const activitiesDates = [16, 30];
 
   //When the day is in the array(activitiesDates) then we will get the information of the activities
   //Example: 20: {title: 'Linux101', room: 'F201', description: 'I use Arch by the way'},
@@ -92,12 +92,12 @@ const Calendar = () => {
       description:
         "¡Esta es tu primera reunión de Iniciación de Info-Tech! ✨\n\n Únete a nosotros para conocer a la comunidad, 📅 explorar el calendario de actividades 🚀 y descubrir todo lo que hemos planeado para este año.",
     },
-    18: {
-      title: "Taller de Virtualización 💻",
-      time: "4:00pm - 5:15pm",
-      room: "G-240",
-      description: "",
-    },
+    // : {
+    //   title: "Taller de Virtualización 💻",
+    //   time: "4:00pm - 5:15pm",
+    //   room: "G-240",
+    //   description: "",
+    // },
     30: {
       title: "Taller de Linux 101 👾",
       time: "5:00pm - 6:15pm",
