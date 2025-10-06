@@ -80,33 +80,40 @@ const Calendar = () => {
 
   //Days that have activities
   //Example: 20
-  const activitiesDates = [16, 30];
+  const activitiesDates = [7, 9, 15, 28];
 
   //When the day is in the array(activitiesDates) then we will get the information of the activities
   //Example: 20: {title: 'Linux101', room: 'F201', description: 'I use Arch by the way'},
   const allActivityInformation = {
-    16: {
-      title: "Reunión de Iniciación de Infotech 🎉",
-      time: "5:00pm - 6:15pm",
-      room: "Salón de Usos Multiples (SUM)",
+    // Octubre
+    7: {
+      title: "Visita de la National Security Agency (NSA) 💻",
+      time: "10:00am en adelante",
+      room: "F-201",
       description:
-        "¡Esta es tu primera reunión de Iniciación de Info-Tech! ✨\n\n Únete a nosotros para conocer a la comunidad, 📅 explorar el calendario de actividades 🚀 y descubrir todo lo que hemos planeado para este año.",
+        "💻 Actividad especial – Visita de la NSA 🇺🇸. En esta actividad, recibiremos la visita de representantes de la NSA (Agencia de Seguridad Nacional), quienes compartirán con los estudiantes su experiencia en el apasionante campo de la ciberseguridad 🔐 y las múltiples oportunidades de desarrollo profesional 🚀 dentro de la agencia. ✨ ¡No te lo pierdas! Una gran oportunidad para aprender directamente de expertos en seguridad nacional 🧠 y explorar tu futuro profesional 💼.",
     },
-    30: {
-      title: "Taller de Virtualización 💻",
+    9: {
+      title: "Taller de Linux 101 👾",
       time: "4:00pm - 5:15pm",
       room: "G-240",
       description:
-        "💻 Este taller está enfocado en el mundo de la virtualización y las máquinas virtuales (VMs). 🎯 Los participantes aprenderán qué es la virtualización, cómo funciona y cuáles son sus beneficios en el ámbito académico y profesional. 🚀",
+        "🐧 Linux 101 es un taller introductorio diseñado para quienes desean dar sus primeros pasos en el sistema operativo Linux. 📚 Durante la sesión, los participantes conocerán los conceptos básicos, los principales comandos del terminal, la estructura de archivos y las aplicaciones más comunes. 💡",
     },
-
-    // Octubre
-    // 2: {
-    //   title: "Taller de Linux 101 👾",
-    //   time: "5:00pm - 6:15pm",
-    //   room: "G-240",
-    //   description: "🐧 Linux 101 es un taller introductorio diseñado para quienes desean dar sus primeros pasos en el sistema operativo Linux. 📚 Durante la sesión, los participantes conocerán los conceptos básicos, los principales comandos del terminal, la estructura de archivos y las aplicaciones más comunes. 💡",
-    // },
+    15: {
+      title: "Taller de Herramientas de Cyber/Wireshark 🤖",
+      time: "2:00pm - 3:00pm",
+      room: "F-203",
+      description:
+        "🛡️ Herramientas de Ciberseguridad es un taller práctico enfocado en las aplicaciones esenciales utilizadas en el campo de la seguridad informática. 💻 Durante la sesión, los participantes conocerán cómo se emplean estas herramientas en el monitoreo, análisis y protección de redes y sistemas, fortaleciendo sus conocimientos en defensa digital. 🔐",
+    },
+    28: {
+      title: "Charla con Hector Monsegur 🔑",
+      time: "2:00pm - 4:30pm",
+      room: "Salon de Usos Multiples (SUM)",
+      description:
+        "🎙️ En esta charla contaremos con la participación de Héctor Monsegur, reconocido internacionalmente por su pasado como integrante del grupo de hackers Anonymous y su rol en LulzSec. ⚡ Hoy, convertido en investigador y conferenciante, comparte su experiencia en ciberseguridad, hacking ético y protección digital. 💡 Durante la sesión narrará su historia, las lecciones aprendidas y su visión sobre los retos actuales de la seguridad informática — una oportunidad única para escuchar de primera mano a una figura destacada en el ámbito global. 🌐",
+    },
   };
   return (
     <>
