@@ -25,7 +25,9 @@ const NavBar = () => {
       {/* The reason that i added max-w-7xl is because that if the screen is to large then the logo and the links will too seperated */}
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
-        <img src={InfotechLogo} className="h-16" />
+        <a href="#">
+          <img src={InfotechLogo} className="h-16" />
+        </a>
 
         {/* Links for pages that have Large screen */}
         <div className="hidden md:flex space-x-8">
