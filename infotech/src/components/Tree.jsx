@@ -52,7 +52,7 @@ const Node = ({left=false}) => {
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                   Vitae, facilis.
                 </p>
-              </div>
+              </div>  
               
             </div>
             </>
