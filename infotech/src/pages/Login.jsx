@@ -13,12 +13,12 @@ const Login = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        const response = await axios.get(`http://localhost:5000/test?email=${email}`)
+        await axios.get(`http://localhost:5000/test?email=${email}`)
         .then(resp => {
             console.log(resp)
             if(resp.data)
             {
-                navigate("/")
+                navigate("/Dashboard")
             }
         })
         .catch(error => {
