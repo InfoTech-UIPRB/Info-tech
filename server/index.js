@@ -1,30 +1,18 @@
 import express from 'express'
 import cors from 'cors'
+import Database from './Database.js'
 
 const app = express()
 const PORT = 5000
 
-//Implement MySql connection
-
-const user = {
-    userId: '23424',
-    name: 'Juan',
-    lastName: 'Pablo'
-}
+const db = new Database()
 
 app.use(cors())
 app.use(express.json()) //Middleware to parse JSON bodies
 
 app.get('/test', (req, res) => {
-    console.log(req.query.email)
-    if (req.query.email == "test@gmail.com")
-    {
-        res.send(true)
-    }
-    else
-    {
-        res.send(false)
-    }
+    const {email, password} = req.query;
+    res.send(db.query(`SELECT * FROM Users WHERE email = '${email}' AND password = '${password}' `));
 });
 
 app.listen(PORT, () => console.log(`Server running on port: http://localhost:${PORT}`))
