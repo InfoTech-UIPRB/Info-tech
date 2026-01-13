@@ -5,7 +5,7 @@ import Nopfp from "../assets/PFP/nopfp.jpg"
 import GroupList from "../components/GroupList";
 import Sidebar from "../components/Sidebar";
 
-const DashBoard = () => {
+const Dashboard = () => {
 
     const groupList = [
         {title: "Linux 101", date: "1-1-1"},
@@ -39,4 +39,4 @@ const DashBoard = () => {
     )
 };
 
-export default DashBoard;
+export default Dashboard;
