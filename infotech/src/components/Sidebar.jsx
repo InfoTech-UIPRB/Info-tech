@@ -8,7 +8,7 @@ export default function Sidebar() {
     <>
       {/* Mobile Toggle Button */}
       <button
-        onClick={() => setIsOpen(true)}
+        onClick={() => setIsOpen(!isOpen)}
         className="fixed top-4 left-4 z-50 md:hidden bg-gray-800 text-white p-2 rounded-lg shadow"
       >
         <Menu size={24} />
@@ -28,7 +28,7 @@ export default function Sidebar() {
         <div className="flex items-center justify-between p-4 border-b border-gray-700">
 
           <button
-            onClick={() => setIsOpen(false)}
+            onClick={() => setIsOpen(!isOpen)}
             className="md:hidden"
           >
             <X size={24} />
