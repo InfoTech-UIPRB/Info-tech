@@ -14,6 +14,7 @@ import IsacaPrimerLugar from "../assets/Images/Isaca_Img.png"
 import JaneHacksPrimerLugar from "../assets/Images/First_Place_JaneHacks.png"
 import BancoPopularPrimerLugar from "../assets/Images/First_Place_Copilot_Studio_Hackathon.png"
 import BloombergPrimerLugarUprRioPiedras from "../assets/Images/Tercer_Lugar_Bloomberg_UPR_Rio_Piedras.png"
+// TODO: Add tree component. Like the old Infotech website.
 import Tree from "../components/Tree.jsx";
 
 const Achievement = () => {
@@ -21,7 +22,7 @@ const Achievement = () => {
         <>
             <NavBar />
                 <div className="flex justify-center flex-wrap mt-5 gap-5 fadeInUp-animation">
-                    {/* <Card title="Primer Lugar - IHack Inter American University Puerto Rico Bayamon"
+                    <Card title="Primer Lugar - IHack Inter American University Puerto Rico Bayamon"
                         img={PrimerLugarIHACK2025} />
                     <Card title="Primer lugar - ISACA IT Bowl Puerto Rico" 
                         img={IsacaPrimerLugar}/>
@@ -36,10 +37,7 @@ const Achievement = () => {
                     <Card title="Primer Lugar - Avanzado Competencia Inter Universitaria de Programación UPR- Bayamon" 
                         img={PrimerLugarUprBayamon} />
                     <Card title="Tercer Lugar - BloomberUPR - Rio Piedras"
-                        img={BloombergPrimerLugarUprRioPiedras} /> */}
-
-                    <Tree />
-                        
+                        img={BloombergPrimerLugarUprRioPiedras} />
                 </div>
             <Footer />
         </>
