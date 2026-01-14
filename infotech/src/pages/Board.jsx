@@ -8,7 +8,6 @@ import Footer from "../components/Footer.jsx";
 import VicePresident from "../assets/PFP/crystal-pfp.jpeg";
 
 import Default from "../assets/PFP/nopfp.jpg";
-import Vocal01 from "../assets/PFP/nordiel-pfp.jpg";
 import Vocal02 from "../assets/PFP/aurelis-pfp.png";
 import Vocal03 from "../assets/PFP/graciela-pfp.jpeg";
 import Vocal04 from "../assets/PFP/axel-pfp.jpeg";
@@ -141,7 +140,7 @@ const Board = () => {
     new Person(
       "Nordiel Martinez",
       "Vocal",
-      Vocal01,
+      null,
       "https://www.linkedin.com/in/nordielmartinez/",
       "https://github.com/nordiel",
       "nmartinez1418@interbayamon.edu",
