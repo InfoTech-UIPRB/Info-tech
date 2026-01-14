@@ -14,6 +14,8 @@ import IsacaPrimerLugar from "../assets/Images/Isaca_Img.png"
 import JaneHacksPrimerLugar from "../assets/Images/First_Place_JaneHacks.png"
 import BancoPopularPrimerLugar from "../assets/Images/First_Place_Copilot_Studio_Hackathon.png"
 import BloombergPrimerLugarUprRioPiedras from "../assets/Images/Tercer_Lugar_Bloomberg_UPR_Rio_Piedras.png"
+// TODO: Add tree component. Like the old Infotech website.
+import Tree from "../components/Tree.jsx";
 
 const Achievement = () => {
     return (

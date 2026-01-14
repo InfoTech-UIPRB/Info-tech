@@ -4,7 +4,7 @@ import { InstagramIcon, GithubIcon } from "lucide-react";
 
 const Footer = () => {
     return (
-        <footer className="text-gray-300 py-10 relative y-10 w-full mt-auto">
+        <footer className="text-gray-300 py-10 relative y-10 w-full mt-auto -z-1">
           <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-wrap justify-between">
               {/* <!-- Logo and Description --> */}
