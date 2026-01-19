@@ -1,4 +1,4 @@
-import mysql from "mysql2/promise";
+import mysql from "mysql2";
 
 export default class Database
 {
@@ -12,12 +12,7 @@ export default class Database
         }); 
     }
 
-    query(sql) {
-        this.connection.connect((err) => {
-            if (err) throw err
-            console.log("Connected")
-            this.connection.query(sql, result)
-        })
-        return result
+    async query(sql) {
+        return await this.connection.execute(sql);
     }
 }
