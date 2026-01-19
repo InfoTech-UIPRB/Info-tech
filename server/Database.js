@@ -7,7 +7,7 @@ export default class Database
         this.connection = mysql.createConnection({
             host: '',
             user: '',
-            password: '@',
+            password: '',
             database: ''
         }); 
     }
