@@ -5,10 +5,10 @@ export default class Database
     constructor()
     {
         this.connection = mysql.createConnection({
-            host: 'localhost',
-            user: 'root',
-            password: 'Chupi197197@',
-            database: 'infotech_db'
+            host: '',
+            user: '',
+            password: '@',
+            database: ''
         }); 
     }
 
