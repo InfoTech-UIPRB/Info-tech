@@ -147,6 +147,10 @@ const Board = () => {
       NordielResume
     ),
     new Person(
+      "Edwin Vazquez"
+      ,"Vocal"
+    ),
+    new Person(
       "Luis Martinez",
       "Vocal",
       Vocal06,
