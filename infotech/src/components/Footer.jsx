@@ -30,7 +30,7 @@ const Footer = () => {
       
             {/* <!-- Copyright --> */}
             <div className="text-center mt-4 text-white">
-              <p>&copy; 2025 InfoTech. All rights reserved.</p>
+              <p>&copy; {new Date().getFullYear()} InfoTech. All rights reserved.</p>
             </div>
           </div>
         </footer>
