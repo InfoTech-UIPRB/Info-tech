@@ -80,19 +80,12 @@ const Calendar = () => {
 
   //Days that have activities
   //Example: 20
-  const activitiesDates = [18];
+  const activitiesDates = [];
 
   //When the day is in the array(activitiesDates) then we will get the information of the activities
   //Example: 20: {title: 'Linux101', room: 'F201', description: 'I use Arch by the way'},
   const allActivityInformation = {
-    // Noviembre
-    18: {
-      title: "Taller de Git/GitHub",
-      time: "4:30pm - 5:30pm",
-      room: "F-201",
-      description:
-        "🎓 Aprende los fundamentos de Git y GitHub: su historia 🧭, configuración inicial ⚙️ y flujo de trabajo real 💻. Participa en ejercicios prácticos para commit, push, pull y clone 🚀, y descubre cómo resolver merge conflicts y crear pull requests 🤝. Ideal para principiantes y entusiastas de la colaboración en equipo 👥.",
-    },
+    
   };
   return (
     <>
