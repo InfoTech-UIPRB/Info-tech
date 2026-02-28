@@ -4,9 +4,7 @@ import Footer from "../components/Footer";
 
 const Calendar = () => {
   const [isSideBarOpen, setIsSidebarOpen] = useState(false);
-  const [activityInformation, setActivityInformation] = useState([
-    { title: "", description: "", time: "", room: "" },
-  ]);
+  const [activityInformation, setActivityInformation] = useState({});
 
   const Sidebar = () => {
     return (
@@ -29,10 +27,10 @@ const Calendar = () => {
             </button>
           </div>
           <ul className="space-y-4">
-            <li>Title: {activityInformation.title}</li>
-            <li>Time: {activityInformation.time}</li>
-            <li>Room: {activityInformation.room}</li>
-            <li>Description: {activityInformation.description}</li>
+              <li>{activityInformation.title &&"Title: " + activityInformation.title}</li>
+              <li>{activityInformation.time && "Time: "   + activityInformation.time}</li>
+              <li>{activityInformation.room && "Room: "   + activityInformation.room}</li>
+              <li>{activityInformation.description && "Description: " + activityInformation.description}</li>
           </ul>
         </div>
       </div>
@@ -78,15 +76,32 @@ const Calendar = () => {
   const blankDays = Array(startingDay).fill(null);
   const days = Array.from({ length: daysInMonth }, (_, i) => i + 1);
 
-  //Days that have activities
-  //Example: 20
-  const activitiesDates = [];
+  // A way to "Automate" the days of activities
+  let activitiesDates;
+  if(currentMonth == "March")
+  {
+    //Days that have activities
+    //Example: 20
+    activitiesDates = [3, 5, 13];
+  }
+  else{
+    activitiesDates = [];
+  }
 
   //When the day is in the array(activitiesDates) then we will get the information of the activities
   //Example: 20: {title: 'Linux101', room: 'F201', description: 'I use Arch by the way'},
-  const allActivityInformation = {
-    
-  };
+  let allActivityInformation = {};
+  if(currentMonth == "March")
+  {
+      allActivityInformation = {
+        3: {title:"Taller AWS Sesión 1", room: "SUM", description: "Introducción a Cloud Computing", time: "3:30pm - 4:30pm"},
+        5: {title:"Taller AWS Sesión 2", description: "Introducción a Inteligencia Artificial Generativa", room: "SUM", time: '3:30pm - 4:30pm'},
+        13:{title:"Finca Happy Givers",  time: '8:45 – 9:45am'},
+      };
+  }
+  else{
+    allActivityInformation = {}
+  }
   return (
     <>
       <NavBar />
